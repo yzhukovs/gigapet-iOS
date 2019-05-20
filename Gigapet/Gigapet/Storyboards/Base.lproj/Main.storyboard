@@ -138,7 +138,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="OkV-cU-3ZO" kind="show" id="ZFL-w5-Z8T"/>
+                                            <segue destination="OkV-cU-3ZO" kind="show" id="UBk-lr-fYW"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -280,7 +280,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="75s-cY-dSb"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Giga-Pet" id="uVg-Ru-5Bu"/>
+                    <navigationItem key="navigationItem" title="Giga-Pet" id="uVg-Ru-5Bu">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="lRw-PY-KEg">
+                            <connections>
+                                <segue destination="bSB-0W-w7I" kind="show" id="3oS-oh-XpO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="csV-Jw-MJt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -309,6 +315,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gyL-l4-H4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3894.202898550725" y="-317.41071428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ygq-yL-8BX">
+            <objects>
+                <viewController id="bSB-0W-w7I" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kEY-dG-L4n">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fM8-55-XBU">
+                                <rect key="frame" x="51" y="250" width="201" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIL-nW-6Uz">
+                                <rect key="frame" x="130" y="175" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="oHE-n3-mHa"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q9q-MO-hMK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4740.579710144928" y="-105.13392857142857"/>
         </scene>
         <!--Food Table View Controller-->
         <scene sceneID="6q2-gx-uXF">
@@ -339,7 +376,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KWP-M8-yE7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4804.347826086957" y="285.9375"/>
+            <point key="canvasLocation" x="3988" y="302"/>
         </scene>
         <!--DetailView-->
         <scene sceneID="f84-D1-Pnq">

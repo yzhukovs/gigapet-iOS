@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJWT
 
 class SignupViewController: UIViewController {
 
