@@ -12,6 +12,12 @@
 		FA3EF5C522932F7400168841 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA3EF5C322932F7400168841 /* Main.storyboard */; };
 		FA3EF5C722932F7C00168841 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA3EF5C622932F7C00168841 /* Assets.xcassets */; };
 		FA3EF5CA22932F7C00168841 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA3EF5C822932F7C00168841 /* LaunchScreen.storyboard */; };
+		FA3EF5D6229333C300168841 /* FoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EF5D5229333C300168841 /* FoodTableViewController.swift */; };
+		FA3EF5D8229333DF00168841 /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EF5D7229333DF00168841 /* FoodDetailViewController.swift */; };
+		FA3EF5DA2293369F00168841 /* SpriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EF5D92293369F00168841 /* SpriteViewController.swift */; };
+		FA3EF5DD2293379100168841 /* SpriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EF5DC2293379100168841 /* SpriteView.swift */; };
+		FA3EF5DF2293388900168841 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EF5DE2293388900168841 /* Pet.swift */; };
+		FA3EF5E22293397600168841 /* SpirteExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EF5E12293397600168841 /* SpirteExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		FA3EF5C622932F7C00168841 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA3EF5C922932F7C00168841 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA3EF5CB22932F7C00168841 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA3EF5D5229333C300168841 /* FoodTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewController.swift; sourceTree = "<group>"; };
+		FA3EF5D7229333DF00168841 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
+		FA3EF5D92293369F00168841 /* SpriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteViewController.swift; sourceTree = "<group>"; };
+		FA3EF5DC2293379100168841 /* SpriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteView.swift; sourceTree = "<group>"; };
+		FA3EF5DE2293388900168841 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
+		FA3EF5E12293397600168841 /* SpirteExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpirteExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +66,68 @@
 		FA3EF5BE22932F7400168841 /* Gigapet */ = {
 			isa = PBXGroup;
 			children = (
-				FA3EF5BF22932F7400168841 /* AppDelegate.swift */,
-				FA3EF5C122932F7400168841 /* ViewController.swift */,
-				FA3EF5C322932F7400168841 /* Main.storyboard */,
+				FA3EF5D4229330C100168841 /* Storyboards */,
+				FA3EF5D12293309E00168841 /* Model */,
+				FA3EF5D2229330A900168841 /* Model Controller */,
+				FA3EF5DB2293377F00168841 /* Views */,
+				FA3EF5D3229330B100168841 /* View Controllers */,
+				FA3EF5E02293396A00168841 /* Resources */,
 				FA3EF5C622932F7C00168841 /* Assets.xcassets */,
-				FA3EF5C822932F7C00168841 /* LaunchScreen.storyboard */,
 				FA3EF5CB22932F7C00168841 /* Info.plist */,
 			);
 			path = Gigapet;
+			sourceTree = "<group>";
+		};
+		FA3EF5D12293309E00168841 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA3EF5DE2293388900168841 /* Pet.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA3EF5D2229330A900168841 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		FA3EF5D3229330B100168841 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA3EF5C122932F7400168841 /* ViewController.swift */,
+				FA3EF5D7229333DF00168841 /* FoodDetailViewController.swift */,
+				FA3EF5D5229333C300168841 /* FoodTableViewController.swift */,
+				FA3EF5D92293369F00168841 /* SpriteViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FA3EF5D4229330C100168841 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FA3EF5C322932F7400168841 /* Main.storyboard */,
+				FA3EF5C822932F7C00168841 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FA3EF5DB2293377F00168841 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA3EF5DC2293379100168841 /* SpriteView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA3EF5E02293396A00168841 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FA3EF5BF22932F7400168841 /* AppDelegate.swift */,
+				FA3EF5E12293397600168841 /* SpirteExtension.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +201,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA3EF5DF2293388900168841 /* Pet.swift in Sources */,
 				FA3EF5C222932F7400168841 /* ViewController.swift in Sources */,
+				FA3EF5D6229333C300168841 /* FoodTableViewController.swift in Sources */,
+				FA3EF5DA2293369F00168841 /* SpriteViewController.swift in Sources */,
+				FA3EF5E22293397600168841 /* SpirteExtension.swift in Sources */,
 				FA3EF5C022932F7400168841 /* AppDelegate.swift in Sources */,
+				FA3EF5D8229333DF00168841 /* FoodDetailViewController.swift in Sources */,
+				FA3EF5DD2293379100168841 /* SpriteView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
