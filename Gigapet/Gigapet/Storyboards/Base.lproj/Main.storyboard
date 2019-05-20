@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6xd-ca-dEg" userLabel="PopupBackground" customClass="BackgroundView" customModule="LogInScreen" customModuleProvider="target">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6xd-ca-dEg" userLabel="PopupBackground" customClass="BackgroundView" customModule="Gigapet" customModuleProvider="target">
                                 <rect key="frame" x="36" y="301" width="343" height="294"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="neJ-HD-zgF">
@@ -27,7 +27,7 @@
                                         <color key="textColor" red="0.28235294119999998" green="0.32156862749999998" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="contact@example.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TVV-Mw-hxk" customClass="CustomTextField" customModule="LogInScreen" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="contact@example.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TVV-Mw-hxk" customClass="CustomTextField" customModule="Gigapet" customModuleProvider="target">
                                         <rect key="frame" x="98" y="91" width="151.5" height="44"/>
                                         <color key="backgroundColor" red="0.90196078430000004" green="0.91764705879999997" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -37,7 +37,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" textContentType="username"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NJY-hD-que" customClass="CustomTextField" customModule="LogInScreen" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NJY-hD-que" customClass="CustomTextField" customModule="Gigapet" customModuleProvider="target">
                                         <rect key="frame" x="98" y="143" width="151.5" height="44"/>
                                         <color key="backgroundColor" red="0.90196078430000004" green="0.91764705879999997" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -69,6 +69,9 @@
                                         <state key="normal" title="Log In">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="xHd-5u-25v" kind="show" id="fkv-mK-AbG"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -169,7 +172,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5tC-tO-c4K" userLabel="PopupBackground" customClass="BackgroundView" customModule="LogInScreen" customModuleProvider="target">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5tC-tO-c4K" userLabel="PopupBackground" customClass="BackgroundView" customModule="Gigapet" customModuleProvider="target">
                                 <rect key="frame" x="36" y="301" width="343" height="294"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8rB-11-Yo2">
@@ -178,7 +181,7 @@
                                         <color key="textColor" red="0.28235294119999998" green="0.32156862749999998" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="contact@example.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CZ6-b4-vte" customClass="CustomTextField" customModule="LogInScreen" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="contact@example.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CZ6-b4-vte" customClass="CustomTextField" customModule="Gigapet" customModuleProvider="target">
                                         <rect key="frame" x="98" y="91" width="151.5" height="44"/>
                                         <color key="backgroundColor" red="0.90196078430000004" green="0.91764705879999997" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -188,7 +191,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" textContentType="username"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KsE-ia-43Y" customClass="CustomTextField" customModule="LogInScreen" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KsE-ia-43Y" customClass="CustomTextField" customModule="Gigapet" customModuleProvider="target">
                                         <rect key="frame" x="98" y="143" width="151.5" height="44"/>
                                         <color key="backgroundColor" red="0.90196078430000004" green="0.91764705879999997" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -220,6 +223,9 @@
                                         <state key="normal" title="Sign Up">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="xHd-5u-25v" kind="show" id="sx2-ye-c4v"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -252,7 +258,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ry5-AG-hXY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1206" y="824"/>
+            <point key="canvasLocation" x="2028" y="96"/>
         </scene>
         <!--Home-->
         <scene sceneID="2EI-NJ-04D">
@@ -281,7 +287,7 @@
                         <viewLayoutGuide key="safeArea" id="75s-cY-dSb"/>
                     </view>
                     <navigationItem key="navigationItem" title="Giga-Pet" id="uVg-Ru-5Bu">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="lRw-PY-KEg">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="lRw-PY-KEg">
                             <connections>
                                 <segue destination="bSB-0W-w7I" kind="show" id="3oS-oh-XpO"/>
                             </connections>
@@ -314,9 +320,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gyL-l4-H4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3894.202898550725" y="-317.41071428571428"/>
+            <point key="canvasLocation" x="3854" y="-306"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Food-->
         <scene sceneID="ygq-yL-8BX">
             <objects>
                 <viewController id="bSB-0W-w7I" sceneMemberID="viewController">
@@ -325,14 +331,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fM8-55-XBU">
-                                <rect key="frame" x="51" y="250" width="201" height="30"/>
+                                <rect key="frame" x="154" y="249" width="201" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIL-nW-6Uz">
-                                <rect key="frame" x="130" y="175" width="42" height="21"/>
+                                <rect key="frame" x="92" y="249" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -342,10 +348,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="oHE-n3-mHa"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Add Food" id="Ub4-9b-hNP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q9q-MO-hMK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4740.579710144928" y="-105.13392857142857"/>
+            <point key="canvasLocation" x="4614" y="-135"/>
         </scene>
         <!--Food Table View Controller-->
         <scene sceneID="6q2-gx-uXF">
@@ -376,7 +383,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KWP-M8-yE7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3988" y="302"/>
+            <point key="canvasLocation" x="3854" y="310"/>
         </scene>
         <!--DetailView-->
         <scene sceneID="f84-D1-Pnq">
@@ -391,7 +398,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MME-fX-g7V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5660.8695652173919" y="284.59821428571428"/>
+            <point key="canvasLocation" x="4614" y="478"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RmK-nV-SEq">
@@ -409,7 +416,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QqI-qB-4RZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2143.4782608695655" y="95.758928571428569"/>
+            <point key="canvasLocation" x="3054" y="-652"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dUW-xU-fmG">
@@ -430,4 +437,7 @@
             <point key="canvasLocation" x="-281" y="137"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="gDw-7Q-vPU"/>
+    </inferredMetricsTieBreakers>
 </document>
