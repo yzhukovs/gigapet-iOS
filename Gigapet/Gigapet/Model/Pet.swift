@@ -12,6 +12,7 @@ class Pet {
     static let shared = Pet()
     private init() {}
     
+    //Roll & Zoom when pet is healthy
     var shouldRoll = false
     var shouldZoom = false
 }
