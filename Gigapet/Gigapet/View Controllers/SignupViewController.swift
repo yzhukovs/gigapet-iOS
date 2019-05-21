@@ -9,17 +9,20 @@
 import UIKit
 import SwiftyJWT
 
-enum HTTPMethod: String {
-    case get = "GET"
-    case post = "POST"
-}
-
 class SignupViewController: UIViewController {
+
+    // MARK: - Constants
+    
+    let nc = NetworkController()
+    
+    // MARK: - Outlets
 
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var emailTextField: UITextField!
     
+    // MARK: - Actions
+
     @IBAction func signupPressed(_ sender: UIButton) {
         // Validate required fields are not empty
         if (usernameTextField.text?.isEmpty)! ||
@@ -32,7 +35,7 @@ class SignupViewController: UIViewController {
         
         let user = User(name: usernameTextField.text!, password: passwordTextField.text!, email: emailTextField.text!)
         
-        mySignUp(with: user) { (error) in
+        nc.mySignUp(with: user) { (error) in
             if let error = error {
                 print("HERE", error)
                 return
@@ -42,46 +45,13 @@ class SignupViewController: UIViewController {
             }
         }
     }
+    
+    // MARK: - VC Lifecycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
-    
-    private let baseURL = URL(string: "https://giga-back-end.herokuapp.com/api")!
-    
-    func mySignUp(with user: User, completion: @escaping (Error?) -> Void){
-        //get url in the doc/ its the endpoints
-        let url = baseURL.appendingPathComponent("users/register")
-        
-        //now make the urlRequest remember to set the value of the content type. BUT HOW DO WE KNOW TO DO THIS?
-        var request = URLRequest(url: url)
-        request.httpMethod = HTTPMethod.post.rawValue
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        do {
-            let je = JSONEncoder()
-            request.httpBody =  try je.encode(user)
-        } catch  {
-            print("Error encoding the httpBody for the signup functon: \(error.localizedDescription)")
-            completion(error)
-            return
-        }
-        
-        //now we can run the data task
-        URLSession.shared.dataTask(with: request) { (_, response, error) in
-            if let response = response as? HTTPURLResponse, response.statusCode != 200 {
-                //200 is a success
-                completion(NSError(domain: "", code: response.statusCode, userInfo: nil))
-                return
-            }
-            if let error = error {
-                print("Error in the data task function of the signup functon: \(error.localizedDescription)")
-                completion(error)
-                return
-            }
-            completion(nil)
-            }.resume()
     }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -91,6 +61,8 @@ class SignupViewController: UIViewController {
         }
     }
     
+    // MARK: - Functions
+
     func displayMessage(userMessage:String) -> Void {
         DispatchQueue.main.async {
                 let alertController = UIAlertController(title: "Alert", message: userMessage, preferredStyle: .alert)
