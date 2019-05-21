@@ -23,6 +23,8 @@
 		FA3EF5EC22935E0D00168841 /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EF5EB22935E0D00168841 /* FoodTableViewCell.swift */; };
 		FA3EF5EE2293604600168841 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EF5ED2293604600168841 /* SignupViewController.swift */; };
 		FA3EF5F02293616900168841 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EF5EF2293616900168841 /* LoginViewController.swift */; };
+		FAAEE0C02294A24F005D3763 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEE0BF2294A24F005D3763 /* User.swift */; };
+		FAAEE0C22294ABD6005D3763 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEE0C12294ABD6005D3763 /* MainPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		FA3EF5EB22935E0D00168841 /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
 		FA3EF5ED2293604600168841 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		FA3EF5EF2293616900168841 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FAAEE0BF2294A24F005D3763 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FAAEE0C12294ABD6005D3763 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +78,6 @@
 				32453DF3895B2935A376D979 /* Pods-Gigapet.debug.xcconfig */,
 				85AB6421557872D70E841816 /* Pods-Gigapet.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -116,6 +119,7 @@
 			children = (
 				FA3EF5DE2293388900168841 /* Pet.swift */,
 				FA3EF5E922935BA500168841 /* Food.swift */,
+				FAAEE0BF2294A24F005D3763 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -136,6 +140,7 @@
 				FA3EF5D92293369F00168841 /* SpriteViewController.swift */,
 				FA3EF5ED2293604600168841 /* SignupViewController.swift */,
 				FA3EF5EF2293616900168841 /* LoginViewController.swift */,
+				FAAEE0C12294ABD6005D3763 /* MainPageViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -289,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAAEE0C02294A24F005D3763 /* User.swift in Sources */,
 				FA3EF5F02293616900168841 /* LoginViewController.swift in Sources */,
 				FA3EF5DF2293388900168841 /* Pet.swift in Sources */,
 				FA3EF5C222932F7400168841 /* ViewController.swift in Sources */,
@@ -296,6 +302,7 @@
 				FA3EF5D6229333C300168841 /* FoodTableViewController.swift in Sources */,
 				FA3EF5DA2293369F00168841 /* SpriteViewController.swift in Sources */,
 				FA3EF5E22293397600168841 /* SpirteExtension.swift in Sources */,
+				FAAEE0C22294ABD6005D3763 /* MainPageViewController.swift in Sources */,
 				FA3EF5C022932F7400168841 /* AppDelegate.swift in Sources */,
 				FA3EF5EA22935BA500168841 /* Food.swift in Sources */,
 				FA3EF5EC22935E0D00168841 /* FoodTableViewCell.swift in Sources */,

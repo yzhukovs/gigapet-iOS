@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OkV-cU-3ZO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7TY-0M-qQp">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,8 +19,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6xd-ca-dEg" userLabel="PopupBackground" customClass="BackgroundView" customModule="Gigapet" customModuleProvider="target">
-                                <rect key="frame" x="36" y="301" width="343" height="294"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6xd-ca-dEg" userLabel="PopupBackground" customClass="BackgroundView" customModule="Gigapet" customModuleProvider="target">
+                                <rect key="frame" x="116" y="328" width="182" height="294"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="neJ-HD-zgF">
                                         <rect key="frame" x="16" y="157" width="74" height="16"/>
@@ -28,8 +28,8 @@
                                         <color key="textColor" red="0.28235294119999998" green="0.32156862749999998" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="contact@example.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TVV-Mw-hxk" customClass="CustomTextField" customModule="Gigapet" customModuleProvider="target">
-                                        <rect key="frame" x="98" y="91" width="151.5" height="44"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TVV-Mw-hxk">
+                                        <rect key="frame" x="98" y="91" width="68" height="44"/>
                                         <color key="backgroundColor" red="0.90196078430000004" green="0.91764705879999997" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="K4L-nP-fyn"/>
@@ -38,8 +38,8 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" textContentType="username"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NJY-hD-que" customClass="CustomTextField" customModule="Gigapet" customModuleProvider="target">
-                                        <rect key="frame" x="98" y="143" width="151.5" height="44"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NJY-hD-que">
+                                        <rect key="frame" x="98" y="143" width="68" height="44"/>
                                         <color key="backgroundColor" red="0.90196078430000004" green="0.91764705879999997" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="Ck3-2O-b7r"/>
@@ -49,12 +49,12 @@
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOS-b6-YvJ">
-                                        <rect key="frame" x="105" y="32" width="56" height="27"/>
+                                        <rect key="frame" x="63" y="32" width="56" height="27"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                         <color key="textColor" red="0.25098039220000001" green="0.27058823529999998" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Geb-jV-iqh">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USERNAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Geb-jV-iqh">
                                         <rect key="frame" x="16" y="105" width="74" height="16"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                         <color key="textColor" red="0.28235294119999998" green="0.32156862749999998" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -71,6 +71,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
+                                            <action selector="loginBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lHb-QB-AWy"/>
                                             <segue destination="xHd-5u-25v" kind="show" id="fkv-mK-AbG"/>
                                         </connections>
                                     </button>
@@ -100,9 +101,17 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6xd-ca-dEg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Oxi-ht-SBV"/>
+                            <constraint firstItem="6xd-ca-dEg" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ct4-oW-Bb0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="exq-mN-Aak"/>
+                    <connections>
+                        <outlet property="passwordTextField" destination="NJY-hD-que" id="6mY-IE-ul4"/>
+                        <outlet property="usernameTextField" destination="TVV-Mw-hxk" id="0SH-j3-iTM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -173,8 +182,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5tC-tO-c4K" userLabel="PopupBackground" customClass="BackgroundView" customModule="Gigapet" customModuleProvider="target">
-                                <rect key="frame" x="36" y="352" width="342" height="294"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5tC-tO-c4K" userLabel="PopupBackground" customClass="BackgroundView" customModule="Gigapet" customModuleProvider="target">
+                                <rect key="frame" x="36" y="301" width="342" height="294"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YbX-RX-vZr">
                                         <rect key="frame" x="131.5" y="32" width="79" height="41"/>
@@ -188,7 +197,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eN7-os-n38">
                                                 <rect key="frame" x="0.0" y="0.0" width="74" height="148"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7e-0c-Gnt">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7e-0c-Gnt">
                                                         <rect key="frame" x="0.0" y="0.0" width="74" height="44"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                                         <color key="textColor" red="0.28235294119999998" green="0.32156862749999998" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -200,7 +209,7 @@
                                                         <color key="textColor" red="0.28235294119999998" green="0.32156862749999998" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Child Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dG-ES-eL5">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dG-ES-eL5">
                                                         <rect key="frame" x="0.0" y="104" width="74" height="44"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                                         <color key="textColor" red="0.28235294119999998" green="0.32156862749999998" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -217,7 +226,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iov-5u-87k">
                                                 <rect key="frame" x="82" y="0.0" width="244" height="148"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="contact@example.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CZ6-b4-vte" customClass="CustomTextField" customModule="Gigapet" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CZ6-b4-vte">
                                                         <rect key="frame" x="0.0" y="0.0" width="244" height="44"/>
                                                         <color key="backgroundColor" red="0.90196078430000004" green="0.91764705879999997" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
@@ -227,7 +236,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" textContentType="username"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KsE-ia-43Y" customClass="CustomTextField" customModule="Gigapet" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KsE-ia-43Y">
                                                         <rect key="frame" x="0.0" y="52" width="244" height="44"/>
                                                         <color key="backgroundColor" red="0.90196078430000004" green="0.91764705879999997" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
@@ -237,7 +246,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="leQ-n4-M4J" customClass="CustomTextField" customModule="Gigapet" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="leQ-n4-M4J">
                                                         <rect key="frame" x="0.0" y="104" width="244" height="44"/>
                                                         <color key="backgroundColor" red="0.90196078430000004" green="0.91764705879999997" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
@@ -263,7 +272,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="xHd-5u-25v" kind="show" id="sx2-ye-c4v"/>
+                                            <action selector="signupPressed:" destination="OkV-cU-3ZO" eventType="touchUpInside" id="FRw-rd-DlV"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -291,15 +300,21 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="c1R-7A-XIO"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="leQ-n4-M4J" id="DgE-n5-ugb"/>
+                        <outlet property="passwordTextField" destination="KsE-ia-43Y" id="7jp-Sw-Ngk"/>
+                        <outlet property="usernameTextField" destination="CZ6-b4-vte" id="Dp9-yz-fio"/>
+                        <segue destination="xHd-5u-25v" kind="show" identifier="Signup Segue" id="q1A-h7-tta"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ry5-AG-hXY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2027.5362318840582" y="95.758928571428569"/>
+            <point key="canvasLocation" x="2145" y="459"/>
         </scene>
         <!--Home-->
         <scene sceneID="2EI-NJ-04D">
             <objects>
-                <viewController title="Home" id="xHd-5u-25v" sceneMemberID="viewController">
+                <viewController title="Home" id="xHd-5u-25v" customClass="MainPageViewController" customModule="Gigapet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cQ7-08-QAj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -437,24 +452,6 @@
             <point key="canvasLocation" x="4614" y="478"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="RmK-nV-SEq">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h8D-lx-7v1" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Opz-bb-X4w">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="xHd-5u-25v" kind="relationship" relationship="rootViewController" id="gDw-7Q-vPU"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QqI-qB-4RZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3054" y="-652"/>
-        </scene>
-        <!--Navigation Controller-->
         <scene sceneID="dUW-xU-fmG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7TY-0M-qQp" sceneMemberID="viewController">
@@ -474,6 +471,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sx2-ye-c4v"/>
+        <segue reference="q1A-h7-tta"/>
     </inferredMetricsTieBreakers>
 </document>

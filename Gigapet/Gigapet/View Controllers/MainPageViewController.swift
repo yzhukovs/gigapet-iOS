@@ -1,20 +1,15 @@
 //
-//  LoginViewController.swift
+//  MainPageViewController.swift
 //  Gigapet
 //
-//  Created by Alex on 5/20/19.
+//  Created by Alex on 5/21/19.
 //  Copyright © 2019 Alex. All rights reserved.
 //
 
 import UIKit
-import SwiftyJWT
 
-class LoginViewController: UIViewController {
+class MainPageViewController: UIViewController {
 
-    @IBOutlet var usernameTextField: UITextField!
-    @IBOutlet var passwordTextField: UITextField!
-    @IBAction func loginBtnPressed(_ sender: UIButton) {
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
