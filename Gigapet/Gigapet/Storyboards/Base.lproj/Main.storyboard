@@ -72,7 +72,6 @@
                                         </state>
                                         <connections>
                                             <action selector="loginBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lHb-QB-AWy"/>
-                                            <segue destination="xHd-5u-25v" kind="show" id="fkv-mK-AbG"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -111,11 +110,12 @@
                     <connections>
                         <outlet property="passwordTextField" destination="NJY-hD-que" id="6mY-IE-ul4"/>
                         <outlet property="usernameTextField" destination="TVV-Mw-hxk" id="0SH-j3-iTM"/>
+                        <segue destination="xHd-5u-25v" kind="show" identifier="Login Segue" id="Ytn-HF-V2r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1206" y="96"/>
+            <point key="canvasLocation" x="1296" y="-7"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="jHC-39-UPS">
@@ -309,7 +309,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ry5-AG-hXY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2145" y="459"/>
+            <point key="canvasLocation" x="1948" y="685"/>
         </scene>
         <!--Home-->
         <scene sceneID="2EI-NJ-04D">
@@ -471,6 +471,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="q1A-h7-tta"/>
+        <segue reference="Ytn-HF-V2r"/>
     </inferredMetricsTieBreakers>
 </document>
