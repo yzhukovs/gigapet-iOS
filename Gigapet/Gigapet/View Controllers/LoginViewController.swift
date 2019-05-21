@@ -15,9 +15,13 @@ class LoginViewController: UIViewController {
     
     let nc = NetworkController()
 
+    // MARK: - Outlets
+
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
+    // MARK: - Actions
+
     @IBAction func loginBtnPressed(_ sender: UIButton) {
         // Validate required fields are not empty
         if (usernameTextField.text?.isEmpty)! ||
@@ -40,22 +44,23 @@ class LoginViewController: UIViewController {
             }
         }
     }
+    
+    // MARK: - VC Lifecycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "Login Segue" {
+            guard let destinationVC = segue.destination as? MainPageViewController else { return }
+        }
     }
-    */
+
+    // MARK: - Functions
 
     func displayMessage(userMessage:String) -> Void {
         DispatchQueue.main.async {
