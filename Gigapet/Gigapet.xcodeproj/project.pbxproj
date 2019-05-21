@@ -26,6 +26,7 @@
 		FAAEE0C02294A24F005D3763 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEE0BF2294A24F005D3763 /* User.swift */; };
 		FAAEE0C22294ABD6005D3763 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEE0C12294ABD6005D3763 /* MainPageViewController.swift */; };
 		FAAEE0C42294B3BC005D3763 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEE0C32294B3BC005D3763 /* NetworkController.swift */; };
+		FAAEE0C62294B5D4005D3763 /* Bearer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEE0C52294B5D4005D3763 /* Bearer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		FAAEE0BF2294A24F005D3763 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FAAEE0C12294ABD6005D3763 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		FAAEE0C32294B3BC005D3763 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		FAAEE0C52294B5D4005D3763 /* Bearer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bearer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				FA3EF5DE2293388900168841 /* Pet.swift */,
 				FA3EF5E922935BA500168841 /* Food.swift */,
 				FAAEE0BF2294A24F005D3763 /* User.swift */,
+				FAAEE0C52294B5D4005D3763 /* Bearer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				FAAEE0C42294B3BC005D3763 /* NetworkController.swift in Sources */,
 				FA3EF5D6229333C300168841 /* FoodTableViewController.swift in Sources */,
 				FA3EF5DA2293369F00168841 /* SpriteViewController.swift in Sources */,
+				FAAEE0C62294B5D4005D3763 /* Bearer.swift in Sources */,
 				FA3EF5E22293397600168841 /* SpirteExtension.swift in Sources */,
 				FAAEE0C22294ABD6005D3763 /* MainPageViewController.swift in Sources */,
 				FA3EF5C022932F7400168841 /* AppDelegate.swift in Sources */,
