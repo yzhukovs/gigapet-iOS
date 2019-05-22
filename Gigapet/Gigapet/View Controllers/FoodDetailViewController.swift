@@ -10,6 +10,22 @@ import UIKit
 
 class FoodDetailViewController: UIViewController {
 
+    // MARK: - Constants
+    var childName: String?
+    var foodName: String?
+    var calorieCount: Int?
+    var category: Category?
+    
+    
+    // MARK: - Outlets
+    
+    @IBOutlet var childNameLbl: UILabel!
+    @IBOutlet var foodNameLbl: UILabel!
+    @IBOutlet var calorieLbl: UILabel!
+    @IBOutlet var categoryLbl: UILabel!
+    
+    // MARK: - VC Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

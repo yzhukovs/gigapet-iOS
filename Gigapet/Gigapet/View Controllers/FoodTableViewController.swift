@@ -18,18 +18,13 @@ class FoodTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "Signup Segue" {
-            guard let destinationVC = segue.destination as? MainPageViewController else { return }
+        if segue.identifier == "Food Detail Segue" {
+            guard let destinationVC = segue.destination as? FoodDetailViewController else { return }
+//            destinationVC.calorieCount = 
         }
     }
 
@@ -47,9 +42,10 @@ class FoodTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath) as! FoodTableViewCell
 
-        // Configure the cell...
+        cell.foodNameLbl.text = "Food: \(nc.foods[indexPath.row].foodName)"
+        cell.calorieLbl.text = "\(nc.foods[indexPath.row].calories)"
 
         return cell
     }
