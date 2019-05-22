@@ -27,6 +27,7 @@ class NetworkController {
     private let baseURL = URL(string: "https://giga-back-end.herokuapp.com/api")!
     var bearer: Bearer?
     var foods: [Food] = []
+    var children: [Child] = []
 
     
     func mySignUp(with user: User, completion: @escaping (Error?) -> Void){
@@ -101,7 +102,6 @@ class NetworkController {
                 completion(NSError())
                 return
             }
-            
             //decode data into our bearer
             let jd = JSONDecoder()
             do {
@@ -140,8 +140,8 @@ class NetworkController {
         encoder.dateEncodingStrategy = .iso8601
         do {
             // Uncomment after fixing - FIX
-//            let jsondata = try encoder.encode(newFood)
-//            request.httpBody =  jsondata
+            let jsondata = try encoder.encode(newFood)
+            request.httpBody =  jsondata
         } catch  {
             print("Error adding food: \(error.localizedDescription)")
             completion(error)
@@ -167,4 +167,53 @@ class NetworkController {
     }
 
     
+    func addChild(name: String, calorieGoal: Int, completion: @escaping (Error?) -> Void){
+        let newChild = Child(parentId: AppPresets.parentId!, name: name, calorieGoal: calorieGoal)
+        
+        //get the url
+        let url = baseURL.appendingPathComponent("app/addchild")
+        
+        //create the request
+        var request = URLRequest(url: url)
+        request.httpMethod = HTTPMethod.post.rawValue
+        
+        //unwarp the bearer because we need to add the value to the header
+        guard let bearer = bearer else {
+            completion(NSError())
+            return }
+        
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("Bearer \(bearer.token)", forHTTPHeaderField: "Authorization")
+        print("Token: \(bearer.token)")
+        
+        //we are posting so we need to encode the httpbody
+        let encoder = JSONEncoder()
+        encoder.dateEncodingStrategy = .iso8601
+        do {
+            let jsondata = try encoder.encode(newChild)
+            request.httpBody =  jsondata
+        } catch  {
+            print("Error adding food: \(error.localizedDescription)")
+            completion(error)
+            return
+        }
+        
+        //call urlsession after request
+        URLSession.shared.dataTask(with: request) { (_, response, error) in
+            if let response = response as? HTTPURLResponse, response.statusCode != 200 {
+                completion(NSError(domain: "", code: response.statusCode, userInfo: nil))
+                print("Response: \(response)")
+                return
+            }
+            
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+                completion(error)
+                return
+            }
+            self.children.append(newChild)
+            completion(nil)
+            }.resume()
+    }
+
 }

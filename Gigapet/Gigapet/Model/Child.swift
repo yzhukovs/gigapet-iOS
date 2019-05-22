@@ -1,5 +1,5 @@
 //
-//  AppPresets.swift
+//  Child.swift
 //  Gigapet
 //
 //  Created by Alex on 5/22/19.
@@ -8,7 +8,9 @@
 
 import Foundation
 
-struct AppPresets {
-    static var parentId: Int?
-    static var childId: Int?
+struct Child: Codable {
+    let parentId: Int
+    let name: String
+    let calorieGoal: Int
 }
+

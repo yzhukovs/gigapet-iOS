@@ -8,13 +8,22 @@
 
 import Foundation
 
-struct Food: Equatable {
+struct Food: Codable {
     var foodName: String
     var foodType: Category
     var calories: Int
     var date: String
     var parentId: Int
     var childId: Int
+    
+    enum Category {
+        case dairy
+        case vegatables
+        case fruits
+        case grains
+        case proteins
+        case junk
+    }
 }
 
 enum Category {

@@ -338,9 +338,9 @@
                         <viewLayoutGuide key="safeArea" id="75s-cY-dSb"/>
                     </view>
                     <navigationItem key="navigationItem" title="Giga-Pet" id="uVg-Ru-5Bu">
-                        <barButtonItem key="leftBarButtonItem" title="Add Child" id="ynq-pg-W27">
+                        <barButtonItem key="leftBarButtonItem" title="Children" id="ynq-pg-W27">
                             <connections>
-                                <segue destination="Egr-YA-62J" kind="show" identifier="Add Child Segue" id="07f-gm-epg"/>
+                                <segue destination="xwq-C7-ahP" kind="show" identifier="Add Child Segue" id="AyV-Lk-IBU"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="lRw-PY-KEg">
@@ -642,7 +642,54 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c7R-Ya-F9b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3054" y="800"/>
+            <point key="canvasLocation" x="3894" y="879"/>
+        </scene>
+        <!--Children-->
+        <scene sceneID="30b-SQ-Qix">
+            <objects>
+                <tableViewController id="xwq-C7-ahP" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Dd4-Is-Has">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCell" rowHeight="78" id="exI-q1-mgV" customClass="ChildTableViewCell" customModule="Gigapet" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="78"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="exI-q1-mgV" id="SDk-Di-Lhi">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="77.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="John" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2WQ-3b-NSt">
+                                            <rect key="frame" x="20" y="25" width="48" height="27"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="childNameLbl" destination="2WQ-3b-NSt" id="ES4-iw-jzI"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xwq-C7-ahP" id="08g-qu-Z3F"/>
+                            <outlet property="delegate" destination="xwq-C7-ahP" id="tM6-G2-vPh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Children" id="lyE-3n-GVF">
+                        <barButtonItem key="rightBarButtonItem" title="Add Child" id="aKx-0Y-gTd">
+                            <connections>
+                                <segue destination="Egr-YA-62J" kind="show" id="iuk-nf-50F"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cKo-0g-Z5b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3054" y="879"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dUW-xU-fmG">

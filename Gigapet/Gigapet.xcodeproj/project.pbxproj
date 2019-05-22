@@ -11,6 +11,9 @@
 		FA07B85F2295BC1C004D6B6E /* AddFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07B85E2295BC1C004D6B6E /* AddFoodViewController.swift */; };
 		FA07B8612295BD66004D6B6E /* AddChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07B8602295BD66004D6B6E /* AddChildViewController.swift */; };
 		FA07B8632295C300004D6B6E /* AppPresets.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07B8622295C300004D6B6E /* AppPresets.swift */; };
+		FA07B8652295DF7F004D6B6E /* Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07B8642295DF7F004D6B6E /* Child.swift */; };
+		FA07B8672295E32B004D6B6E /* ChildrenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07B8662295E32B004D6B6E /* ChildrenTableViewController.swift */; };
+		FA07B86B2295E4CA004D6B6E /* ChildTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07B86A2295E4CA004D6B6E /* ChildTableViewCell.swift */; };
 		FA3EF5C022932F7400168841 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EF5BF22932F7400168841 /* AppDelegate.swift */; };
 		FA3EF5C222932F7400168841 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EF5C122932F7400168841 /* ViewController.swift */; };
 		FA3EF5C522932F7400168841 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA3EF5C322932F7400168841 /* Main.storyboard */; };
@@ -39,6 +42,9 @@
 		FA07B85E2295BC1C004D6B6E /* AddFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodViewController.swift; sourceTree = "<group>"; };
 		FA07B8602295BD66004D6B6E /* AddChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChildViewController.swift; sourceTree = "<group>"; };
 		FA07B8622295C300004D6B6E /* AppPresets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPresets.swift; sourceTree = "<group>"; };
+		FA07B8642295DF7F004D6B6E /* Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Child.swift; sourceTree = "<group>"; };
+		FA07B8662295E32B004D6B6E /* ChildrenTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildrenTableViewController.swift; sourceTree = "<group>"; };
+		FA07B86A2295E4CA004D6B6E /* ChildTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildTableViewCell.swift; sourceTree = "<group>"; };
 		FA3EF5BC22932F7400168841 /* Gigapet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gigapet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA3EF5BF22932F7400168841 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA3EF5C122932F7400168841 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +97,24 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		FA07B8682295E42B004D6B6E /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				FA3EF5ED2293604600168841 /* SignupViewController.swift */,
+				FA3EF5EF2293616900168841 /* LoginViewController.swift */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		FA07B8692295E42F004D6B6E /* Table Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA3EF5D5229333C300168841 /* FoodTableViewController.swift */,
+				FA07B8662295E32B004D6B6E /* ChildrenTableViewController.swift */,
+			);
+			path = "Table Views";
+			sourceTree = "<group>";
+		};
 		FA3EF5B322932F7400168841 = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +155,7 @@
 				FA3EF5E922935BA500168841 /* Food.swift */,
 				FAAEE0BF2294A24F005D3763 /* User.swift */,
 				FAAEE0C52294B5D4005D3763 /* Bearer.swift */,
+				FA07B8642295DF7F004D6B6E /* Child.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -146,12 +171,11 @@
 		FA3EF5D3229330B100168841 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FA07B8692295E42F004D6B6E /* Table Views */,
+				FA07B8682295E42B004D6B6E /* Signup */,
 				FA3EF5C122932F7400168841 /* ViewController.swift */,
 				FA3EF5D7229333DF00168841 /* FoodDetailViewController.swift */,
-				FA3EF5D5229333C300168841 /* FoodTableViewController.swift */,
 				FA3EF5D92293369F00168841 /* SpriteViewController.swift */,
-				FA3EF5ED2293604600168841 /* SignupViewController.swift */,
-				FA3EF5EF2293616900168841 /* LoginViewController.swift */,
 				FAAEE0C12294ABD6005D3763 /* MainPageViewController.swift */,
 				FA07B85E2295BC1C004D6B6E /* AddFoodViewController.swift */,
 				FA07B8602295BD66004D6B6E /* AddChildViewController.swift */,
@@ -173,6 +197,7 @@
 			children = (
 				FA3EF5DC2293379100168841 /* SpriteView.swift */,
 				FA3EF5EB22935E0D00168841 /* FoodTableViewCell.swift */,
+				FA07B86A2295E4CA004D6B6E /* ChildTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -313,6 +338,7 @@
 				FA07B8612295BD66004D6B6E /* AddChildViewController.swift in Sources */,
 				FA3EF5F02293616900168841 /* LoginViewController.swift in Sources */,
 				FA3EF5DF2293388900168841 /* Pet.swift in Sources */,
+				FA07B86B2295E4CA004D6B6E /* ChildTableViewCell.swift in Sources */,
 				FA3EF5C222932F7400168841 /* ViewController.swift in Sources */,
 				FA3EF5EE2293604600168841 /* SignupViewController.swift in Sources */,
 				FA07B8632295C300004D6B6E /* AppPresets.swift in Sources */,
@@ -325,8 +351,10 @@
 				FA3EF5C022932F7400168841 /* AppDelegate.swift in Sources */,
 				FA3EF5EA22935BA500168841 /* Food.swift in Sources */,
 				FA3EF5EC22935E0D00168841 /* FoodTableViewCell.swift in Sources */,
+				FA07B8672295E32B004D6B6E /* ChildrenTableViewController.swift in Sources */,
 				FA07B85F2295BC1C004D6B6E /* AddFoodViewController.swift in Sources */,
 				FA3EF5D8229333DF00168841 /* FoodDetailViewController.swift in Sources */,
+				FA07B8652295DF7F004D6B6E /* Child.swift in Sources */,
 				FA3EF5DD2293379100168841 /* SpriteView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
