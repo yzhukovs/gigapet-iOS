@@ -340,12 +340,12 @@
                     <navigationItem key="navigationItem" title="Giga-Pet" id="uVg-Ru-5Bu">
                         <barButtonItem key="leftBarButtonItem" title="Add Child" id="ynq-pg-W27">
                             <connections>
-                                <segue destination="Egr-YA-62J" kind="show" id="07f-gm-epg"/>
+                                <segue destination="Egr-YA-62J" kind="show" identifier="Add Child Segue" id="07f-gm-epg"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="lRw-PY-KEg">
                             <connections>
-                                <segue destination="bSB-0W-w7I" kind="show" id="3oS-oh-XpO"/>
+                                <segue destination="bSB-0W-w7I" kind="show" identifier="Add Food Segue" id="3oS-oh-XpO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

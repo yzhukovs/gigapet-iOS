@@ -10,9 +10,11 @@ import Foundation
 
 struct Food: Equatable {
     var foodName: String
-    var calorieCount: Int
-    var category: Category
-    var date: Date
+    var foodType: Category
+    var calories: Int
+    var date: String
+    var parentId: Int
+    var childId: Int
 }
 
 enum Category {

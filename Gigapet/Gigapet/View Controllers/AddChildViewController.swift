@@ -10,12 +10,25 @@ import UIKit
 
 class AddChildViewController: UIViewController {
 
+    // MARK: - Constants
+    
+    var nc: NetworkController?{
+        didSet{
+            print("NC passed.")
+        }
+    }
+    
+    // MARK: - Outlets
+    
     @IBOutlet var childNameTextField: UITextField!
     @IBOutlet var calorieGoalTextField: UITextField!
 
+    // MARK: - Actions
+    
     @IBAction func saveChildBtnPressed(_ sender: UIBarButtonItem) {
     }
     
+    // MARK: - Functions
     
     override func viewDidLoad() {
         super.viewDidLoad()

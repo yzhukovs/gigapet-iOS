@@ -10,6 +10,7 @@
 		0F6C6682DA1DC311B14D3655 /* Pods_Gigapet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1228E25B748404596C062673 /* Pods_Gigapet.framework */; };
 		FA07B85F2295BC1C004D6B6E /* AddFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07B85E2295BC1C004D6B6E /* AddFoodViewController.swift */; };
 		FA07B8612295BD66004D6B6E /* AddChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07B8602295BD66004D6B6E /* AddChildViewController.swift */; };
+		FA07B8632295C300004D6B6E /* AppPresets.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07B8622295C300004D6B6E /* AppPresets.swift */; };
 		FA3EF5C022932F7400168841 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EF5BF22932F7400168841 /* AppDelegate.swift */; };
 		FA3EF5C222932F7400168841 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EF5C122932F7400168841 /* ViewController.swift */; };
 		FA3EF5C522932F7400168841 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA3EF5C322932F7400168841 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 		85AB6421557872D70E841816 /* Pods-Gigapet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gigapet.release.xcconfig"; path = "Target Support Files/Pods-Gigapet/Pods-Gigapet.release.xcconfig"; sourceTree = "<group>"; };
 		FA07B85E2295BC1C004D6B6E /* AddFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodViewController.swift; sourceTree = "<group>"; };
 		FA07B8602295BD66004D6B6E /* AddChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChildViewController.swift; sourceTree = "<group>"; };
+		FA07B8622295C300004D6B6E /* AppPresets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPresets.swift; sourceTree = "<group>"; };
 		FA3EF5BC22932F7400168841 /* Gigapet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gigapet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA3EF5BF22932F7400168841 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA3EF5C122932F7400168841 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			children = (
 				FA3EF5BF22932F7400168841 /* AppDelegate.swift */,
 				FA3EF5E12293397600168841 /* SpirteExtension.swift */,
+				FA07B8622295C300004D6B6E /* AppPresets.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				FA3EF5DF2293388900168841 /* Pet.swift in Sources */,
 				FA3EF5C222932F7400168841 /* ViewController.swift in Sources */,
 				FA3EF5EE2293604600168841 /* SignupViewController.swift in Sources */,
+				FA07B8632295C300004D6B6E /* AppPresets.swift in Sources */,
 				FAAEE0C42294B3BC005D3763 /* NetworkController.swift in Sources */,
 				FA3EF5D6229333C300168841 /* FoodTableViewController.swift in Sources */,
 				FA3EF5DA2293369F00168841 /* SpriteViewController.swift in Sources */,

@@ -10,6 +10,16 @@ import UIKit
 
 class AddFoodViewController: UIViewController {
 
+    // MARK: - Constants
+    
+    var nc: NetworkController?{
+        didSet{
+            print("NC passed.")
+        }
+    }
+    
+    // MARK: - Outlets
+    
     @IBOutlet var foodTextField: UITextField!
     @IBOutlet var caloriesTextField: UITextField!
     
@@ -19,6 +29,8 @@ class AddFoodViewController: UIViewController {
     @IBOutlet var fruitsBtn: UIButton!
     @IBOutlet var proteinsBtn: UIButton!
     @IBOutlet var junkBtn: UIButton!
+    
+    // MARK: - Actions
     
     @IBAction func dairyBtnPressed(_ sender: UIButton) {
     }
@@ -36,6 +48,7 @@ class AddFoodViewController: UIViewController {
     @IBAction func saveBtnPressed(_ sender: UIBarButtonItem) {
     }
     
+    // MARK: - VC Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
