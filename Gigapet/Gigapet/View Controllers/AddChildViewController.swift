@@ -17,6 +17,12 @@ class AddChildViewController: UIViewController {
             print("NC passed.")
         }
     }
+    var child: Child? {
+        didSet {
+            print("Child passed.")
+            updateViews()
+        }
+    }
     
     // MARK: - Outlets
     
@@ -51,10 +57,19 @@ class AddChildViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        updateViews()
     }
     
 
+    private func updateViews(){
+        guard let passedChild = child, isViewLoaded else {
+            title = "Add Child"
+            return}
+        title = passedChild.name
+        childNameTextField.text = passedChild.name
+        calorieGoalTextField.text = String(passedChild.calorieGoal)
+    }
+    
     func displayMessage(userMessage:String) -> Void {
         DispatchQueue.main.async {
             let alertController = UIAlertController(title: "Alert", message: userMessage, preferredStyle: .alert)

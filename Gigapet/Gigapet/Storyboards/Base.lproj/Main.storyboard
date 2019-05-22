@@ -682,7 +682,7 @@
                     <navigationItem key="navigationItem" title="Children" id="lyE-3n-GVF">
                         <barButtonItem key="rightBarButtonItem" title="Add Child" id="aKx-0Y-gTd">
                             <connections>
-                                <segue destination="Egr-YA-62J" kind="show" id="iuk-nf-50F"/>
+                                <segue destination="Egr-YA-62J" kind="show" identifier="AddChild Segue" id="iuk-nf-50F"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
