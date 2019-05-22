@@ -10,6 +10,33 @@ import UIKit
 
 class AddFoodViewController: UIViewController {
 
+    @IBOutlet var foodTextField: UITextField!
+    @IBOutlet var caloriesTextField: UITextField!
+    
+    @IBOutlet var dairyBtn: UIButton!
+    @IBOutlet var vegatablesBtn: UIButton!
+    @IBOutlet var grainsBtn: UIButton!
+    @IBOutlet var fruitsBtn: UIButton!
+    @IBOutlet var proteinsBtn: UIButton!
+    @IBOutlet var junkBtn: UIButton!
+    
+    @IBAction func dairyBtnPressed(_ sender: UIButton) {
+    }
+    @IBAction func grainsBtnPressed(_ sender: UIButton) {
+    }
+    @IBAction func vegatablesBtnPressed(_ sender: UIButton) {
+    }
+    @IBAction func fruitsBtnPressed(_ sender: UIButton) {
+    }
+    @IBAction func proteinsBtnPressed(_ sender: UIButton) {
+    }
+    @IBAction func junkBtnPressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func saveBtnPressed(_ sender: UIBarButtonItem) {
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
