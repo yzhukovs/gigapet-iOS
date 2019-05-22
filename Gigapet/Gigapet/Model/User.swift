@@ -16,9 +16,5 @@ struct User: Codable {
 
 struct Kid: Codable {
     let childName: String
-    
-    let username: String
-    let password: String
-    let childAge: Int
-    
+    let caloriteGoal: Int
 }
