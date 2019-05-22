@@ -61,7 +61,7 @@ class AddFoodViewController: UIViewController {
             return
         }
         
-        nc?.addFood(foodName: foodTextField.text!, foodType: categorySelected!, calories: Int(caloriesTextField.text!)!, date: "2019-05-25", childId: <#T##Int#>, completion: { (error) in
+        nc?.addFood(foodName: foodTextField.text!, foodType: categorySelected!, calories: Int(caloriesTextField.text!)!, date: "2019-05-25", childId: AppPresets.childId ?? 1, completion: { (error) in
             if let error = error {
                 print(error)
                 return
