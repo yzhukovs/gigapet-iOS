@@ -139,7 +139,8 @@ class NetworkController {
         let encoder = JSONEncoder()
         encoder.dateEncodingStrategy = .iso8601
         do {
-            let jsondata = try encoder.encode(newFood)
+            // Uncomment after fixing
+//            let jsondata = try encoder.encode(newFood)
             request.httpBody =  jsondata
         } catch  {
             print("Error adding food: \(error.localizedDescription)")
