@@ -220,4 +220,55 @@ class NetworkController {
             }.resume()
     }
 
+    func fetchFoods(completion: @escaping (Result<[Food], NetworkError>) -> Void){
+        //get the url set up
+        let url = baseURL.appendingPathComponent("app/\(AppPresets.childId)")
+        
+        //set up the request
+        var request = URLRequest(url: url)
+        request.httpMethod = HTTPMethod.get.rawValue
+        
+        //token
+        let accessToken: String? = KeychainWrapper.standard.string(forKey: "accessToken")
+        request.addValue("Bearer \(accessToken!)", forHTTPHeaderField: "Authorization")
+        
+        guard let bearer = bearer else {
+            completion(.failure(.noAuth))
+            return
+        }
+        
+        //we dont have to do the request body because the http method is a get
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let response = response as? HTTPURLResponse, response.statusCode == 401 {
+                //per the documentation 401 is a bad response code
+                completion(.failure(.badAuth))
+                return
+            }
+            
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+                completion(.failure(.otherError))
+                return
+            }
+            
+            guard let data = data else {
+                print("Error unwrapping data: \(NSError())")
+                completion(.failure(.badData))
+                return
+            }
+            
+            let jd = JSONDecoder()
+            jd.dateDecodingStrategy = .iso8601  //because our object has a property of type Date, we must decode/encode Date property by using this
+            do {
+                let foods = try jd.decode([Food].self, from: data)
+                completion(.success(foods))
+            } catch {
+                print("Error decoding: \(error.localizedDescription)")
+                completion(.failure(.noDecode))
+                return
+            }
+            }.resume()
+    }
+    
 }

@@ -67,7 +67,10 @@ class AddFoodViewController: UIViewController {
             displayMessage(userMessage: "All fields are required to be filled in")
             return
         }
-        
+        if AppPresets.childId == nil {
+            displayMessage(userMessage: "You must go back to select a child before adding food items")
+            return
+        }
         nc?.addFood(foodName: foodTextField.text!, foodType: categorySelected, calories: Int(caloriesTextField.text!)!, date: "2019-05-25", childId: AppPresets.childId ?? 1, completion: { (error) in
             if let error = error {
                 print(error)
