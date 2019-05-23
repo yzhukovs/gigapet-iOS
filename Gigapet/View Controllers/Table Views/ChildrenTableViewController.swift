@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftKeychainWrapper
 
 class ChildrenTableViewController: UITableViewController {
 
@@ -21,6 +22,25 @@ class ChildrenTableViewController: UITableViewController {
     // MARK: - VC Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        //token
+        let accessToken: String? = KeychainWrapper.standard.string(forKey: "accessToken")
+        
+        if accessToken == nil {
+            //this means we have not signed in otherwise we would have our token
+            performSegue(withIdentifier: "Login Segue", sender: self)
+        } else {
+            nc.fetchChildren { (result) in
+                if let children = try? result.get() {
+                    DispatchQueue.main.async {
+                        self.nc.children = children
+                        self.tableView.reloadData()
+                    }
+                }
+            }
+        }
     }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
