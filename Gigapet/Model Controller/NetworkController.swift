@@ -132,9 +132,9 @@ class NetworkController {
         request.addValue("Bearer \(accessToken!)", forHTTPHeaderField: "Authorization")
         
         //unwarp the bearer because we need to add the value to the header
-        guard let bearer = bearer else {
-            completion(NSError())
-            return }
+//        guard let bearer = bearer else {
+//            completion(NSError())
+//            return }
         
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 //        request.addValue("Bearer \(bearer.token)", forHTTPHeaderField: "Authorization")
@@ -182,13 +182,17 @@ class NetworkController {
         request.httpMethod = HTTPMethod.post.rawValue
         
         //unwarp the bearer because we need to add the value to the header
-        guard let bearer = bearer else {
-            completion(NSError())
-            return }
+//        guard let bearer = bearer else {
+//            completion(NSError())
+//            return }
+        
+        //token
+        let accessToken: String? = KeychainWrapper.standard.string(forKey: "accessToken")
+        request.addValue("Bearer \(accessToken!)", forHTTPHeaderField: "Authorization")
         
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("Bearer \(bearer.token)", forHTTPHeaderField: "Authorization")
-        print("Token: \(bearer.token)")
+//        request.addValue("Bearer \(bearer.token)", forHTTPHeaderField: "Authorization")
+        print("Token: \(accessToken)")
         
         //we are posting so we need to encode the httpbody
         let encoder = JSONEncoder()
