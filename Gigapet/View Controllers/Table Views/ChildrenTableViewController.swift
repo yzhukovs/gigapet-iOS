@@ -27,7 +27,7 @@ class ChildrenTableViewController: UITableViewController {
         super.viewDidAppear(animated)
         print("view did appear ran")
         nc.fetchChildren { (result) in
-            print("Ran fetchChildren")
+            print("Ran fetchChildren", result)
             if let children = try? result.get() {
                 print(children, "HERE, child.")
                 DispatchQueue.main.async {
@@ -62,7 +62,7 @@ class ChildrenTableViewController: UITableViewController {
         if segue.identifier == "AddChild Segue" {
             guard let destinationVc = segue.destination as? AddChildViewController, let index = tableView.indexPathForSelectedRow else { return }
             let childToPass = nc.children[index.row]
-            AppPresets.childId = childToPass.id //FIX - switch to childId
+            AppPresets.childId = childToPass.id
             destinationVc.child = childToPass
             destinationVc.nc = nc
         }

@@ -117,8 +117,10 @@ class NetworkController {
             }.resume()
     }
 
-    func addFood(foodName: String, foodType: Category, calories: Int, date: String, childId: Int, completion: @escaping (Error?) -> Void){
-        let newFood = Food(foodName: foodName, foodType: foodType, calories: calories, date: date, parentId: AppPresets.parentId!, childId: childId)
+    func addFood(foodName: String, foodType: Category, calories: String, date: String, childId: String, completion: @escaping (Error?) -> Void){
+        let userId: String? = KeychainWrapper.standard.string(forKey: "userId")
+
+        let newFood = Food(foodName: foodName, foodType: foodType, calories: calories, date: date, parentId: userId!, childId: childId)
         
         //get the url
         let url = baseURL.appendingPathComponent("app/addfood")
@@ -171,8 +173,10 @@ class NetworkController {
     }
 
     
-    func addChild(name: String, calorieGoal: Int, completion: @escaping (Error?) -> Void){
-        let newChild = Child(id: AppPresets.parentId!, name: name, calorieGoal: calorieGoal)
+    func addChild(name: String, calorieGoal: String, completion: @escaping (Error?) -> Void){
+        let userId: String? = KeychainWrapper.standard.string(forKey: "userId")
+
+        let newChild = Child(id: userId!, name: name, calorieGoal: calorieGoal)
         
         //get the url
         let url = baseURL.appendingPathComponent("app/addchild")
@@ -225,8 +229,10 @@ class NetworkController {
     }
 
     func fetchFoods(completion: @escaping (Result<[Food], NetworkError>) -> Void){
+        let userId: String = KeychainWrapper.standard.string(forKey: "userId")!
+
         // get foods for this child
-        let url = baseURL.appendingPathComponent("app/getfood/\(AppPresets.childId)")
+        let url = baseURL.appendingPathComponent("app/getfood/\(userId)")
         
         //set up the request
         var request = URLRequest(url: url)
@@ -234,13 +240,12 @@ class NetworkController {
         
         //token
         let accessToken: String? = KeychainWrapper.standard.string(forKey: "accessToken")
-        request.addValue("Bearer \(accessToken!)", forHTTPHeaderField: "Authorization")
+        request.addValue("Bearer \(String(describing: accessToken))", forHTTPHeaderField: "Authorization")
         
         //we dont have to do the request body because the http method is a get
         print("HERE Token:", accessToken)
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let response = response as? HTTPURLResponse, response.statusCode == 401 {
-                //per the documentation 401 is a bad response code
                 print("Response failure", response)
                 completion(.failure(.badAuth))
                 return
@@ -274,16 +279,18 @@ class NetworkController {
     }
     
     func fetchChildren(completion: @escaping (Result<[Child], NetworkError>) -> Void){
+        let userId: String? = KeychainWrapper.standard.string(forKey: "userId")
         // get list of children
-        let url = baseURL.appendingPathComponent("app/childname/\(AppPresets.parentId)")
+        let url = baseURL.appendingPathComponent("app/childname/\(userId)")
         
         //set up the request
         var request = URLRequest(url: url)
         request.httpMethod = HTTPMethod.get.rawValue
         
         //token
-        let accessToken: String? = KeychainWrapper.standard.string(forKey: "accessToken")
-        request.addValue("Bearer \(accessToken!)", forHTTPHeaderField: "Authorization")
+        guard let accessToken: String = KeychainWrapper.standard.string(forKey: "accessToken") else {return}
+        
+        request.addValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
         
         //we dont have to do the request body because the http method is a get
         

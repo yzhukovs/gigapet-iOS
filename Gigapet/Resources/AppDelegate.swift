@@ -18,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         let accessToken: String? = KeychainWrapper.standard.string(forKey: "accessToken")
+        let userId = KeychainWrapper.standard.string(forKey: "userId")
+
         if accessToken != nil
         {
             // Take user to a home page

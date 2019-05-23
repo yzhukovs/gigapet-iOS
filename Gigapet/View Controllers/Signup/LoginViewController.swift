@@ -65,10 +65,11 @@ class LoginViewController: UIViewController {
                     // Now we can access value of First Name by its key
                     let accessToken = parseJSON["token"] as? String
                     let userId = parseJSON["id"] as? Int64
-                    print("Access token: \(String(describing: accessToken!))")
+                    print("Access token: \(String(describing: accessToken!))", "Print user id:", userId)
                     
                     let saveAccesssToken: Bool = KeychainWrapper.standard.set(accessToken!, forKey: "accessToken")
                     let saveUserId: Bool = KeychainWrapper.standard.set(String(describing:userId!), forKey: "userId")
+//                    AppPresets.parentId = userId
                     
                     print("The access token save result: \(saveAccesssToken)")
                     print("The userId save result \(saveUserId)")

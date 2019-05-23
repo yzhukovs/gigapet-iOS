@@ -11,10 +11,10 @@ import Foundation
 struct Food: Codable {
     var foodName: String
     var foodType: Category
-    var calories: Int
+    var calories: String
     var date: String
-    var parentId: Int
-    var childId: Int
+    var parentId: String
+    var childId: String
 
 }
 

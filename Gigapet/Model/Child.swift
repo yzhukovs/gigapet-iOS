@@ -9,8 +9,8 @@
 import Foundation
 
 struct Child: Codable {
-    let id: Int
+    let id: String
     let name: String
-    let calorieGoal: Int
+    let calorieGoal: String
 }
 
