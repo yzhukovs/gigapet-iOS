@@ -5,7 +5,6 @@
 //  Created by Alex on 5/21/19.
 //  Copyright © 2019 Alex. All rights reserved.
 //
-
 import Foundation
 import UIKit
 import SwiftKeychainWrapper
@@ -130,8 +129,8 @@ class NetworkController {
         request.httpMethod = HTTPMethod.post.rawValue
         
         //token
-        let accessToken: String? = KeychainWrapper.standard.string(forKey: "accessToken")
-        request.addValue("Bearer \(accessToken!)", forHTTPHeaderField: "Authorization")
+        let accessToken: String = KeychainWrapper.standard.string(forKey: "accessToken")!
+        request.addValue("\(String(describing: accessToken))", forHTTPHeaderField: "Authorization")
         
         //unwarp the bearer because we need to add the value to the header
 //        guard let bearer = bearer else {
@@ -191,8 +190,8 @@ class NetworkController {
 //            return }
         
         //token
-        let accessToken: String? = KeychainWrapper.standard.string(forKey: "accessToken")
-        request.addValue("Bearer \(accessToken!)", forHTTPHeaderField: "Authorization")
+        let accessToken: String = KeychainWrapper.standard.string(forKey: "accessToken")!
+        request.addValue("\(String(describing: accessToken))", forHTTPHeaderField: "Authorization")
         
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 //        request.addValue("Bearer \(bearer.token)", forHTTPHeaderField: "Authorization")
@@ -239,8 +238,8 @@ class NetworkController {
         request.httpMethod = HTTPMethod.get.rawValue
         
         //token
-        let accessToken: String? = KeychainWrapper.standard.string(forKey: "accessToken")
-        request.addValue("Bearer \(String(describing: accessToken))", forHTTPHeaderField: "Authorization")
+        let accessToken: String = KeychainWrapper.standard.string(forKey: "accessToken")!
+        request.addValue("\(String(describing: accessToken))", forHTTPHeaderField: "Authorization")
         
         //we dont have to do the request body because the http method is a get
         print("HERE Token:", accessToken)
@@ -288,9 +287,8 @@ class NetworkController {
         request.httpMethod = HTTPMethod.get.rawValue
         
         //token
-        guard let accessToken: String = KeychainWrapper.standard.string(forKey: "accessToken") else {return}
-        
-        request.addValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+        let accessToken: String = KeychainWrapper.standard.string(forKey: "accessToken")!
+        request.addValue("\(String(describing: accessToken))", forHTTPHeaderField: "Authorization")
         
         //we dont have to do the request body because the http method is a get
         
