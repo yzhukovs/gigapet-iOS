@@ -26,22 +26,35 @@ class FoodTableViewController: UITableViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        //token
-        let accessToken: String? = KeychainWrapper.standard.string(forKey: "accessToken")
-        
-        if accessToken == nil {
-            //this means we have not signed in otherwise we would have our token
-            performSegue(withIdentifier: "Login Segue", sender: self)
-        } else {
-            nc.fetchFoods { (result) in
-                if let foods = try? result.get() {
-                    DispatchQueue.main.async {
-                        self.nc.foods = foods
-                        self.tableView.reloadData()
-                    }
+        print("view did appear ran")
+
+        nc.fetchFoods { (result) in
+            if let foods = try? result.get() {
+                print("Foods HERE:", foods)
+                DispatchQueue.main.async {
+                    self.nc.foods = foods
+                    self.tableView.reloadData()
                 }
             }
         }
+        
+        
+//        //token
+//        let accessToken: String? = KeychainWrapper.standard.string(forKey: "accessToken")
+//
+//        if accessToken == nil {
+//            //this means we have not signed in otherwise we would have our token
+//            performSegue(withIdentifier: "Login Segue", sender: self)
+//        } else {
+//            nc.fetchFoods { (result) in
+//                if let foods = try? result.get() {
+//                    DispatchQueue.main.async {
+//                        self.nc.foods = foods
+//                        self.tableView.reloadData()
+//                    }
+//                }
+//            }
+//        }
     }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation

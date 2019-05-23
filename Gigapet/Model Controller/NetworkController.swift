@@ -172,7 +172,7 @@ class NetworkController {
 
     
     func addChild(name: String, calorieGoal: Int, completion: @escaping (Error?) -> Void){
-        let newChild = Child(parentId: AppPresets.parentId!, name: name, calorieGoal: calorieGoal)
+        let newChild = Child(id: AppPresets.parentId!, name: name, calorieGoal: calorieGoal)
         
         //get the url
         let url = baseURL.appendingPathComponent("app/addchild")
@@ -237,10 +237,11 @@ class NetworkController {
         request.addValue("Bearer \(accessToken!)", forHTTPHeaderField: "Authorization")
         
         //we dont have to do the request body because the http method is a get
-        
+        print("HERE Token:", accessToken)
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let response = response as? HTTPURLResponse, response.statusCode == 401 {
                 //per the documentation 401 is a bad response code
+                print("Response failure", response)
                 completion(.failure(.badAuth))
                 return
             }
@@ -256,11 +257,13 @@ class NetworkController {
                 completion(.failure(.badData))
                 return
             }
+            print("DATA", data)
             
             let jd = JSONDecoder()
             jd.dateDecodingStrategy = .iso8601  //because our object has a property of type Date, we must decode/encode Date property by using this
             do {
                 let foods = try jd.decode([Food].self, from: data)
+                print("do block", foods)
                 completion(.success(foods))
             } catch {
                 print("Error decoding: \(error.localizedDescription)")

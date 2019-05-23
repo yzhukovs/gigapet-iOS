@@ -25,22 +25,36 @@ class ChildrenTableViewController: UITableViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        //token
-        let accessToken: String? = KeychainWrapper.standard.string(forKey: "accessToken")
-        
-        if accessToken == nil {
-            //this means we have not signed in otherwise we would have our token
-            performSegue(withIdentifier: "Login Segue", sender: self)
-        } else {
-            nc.fetchChildren { (result) in
-                if let children = try? result.get() {
-                    DispatchQueue.main.async {
-                        self.nc.children = children
-                        self.tableView.reloadData()
-                    }
+        print("view did appear ran")
+        nc.fetchChildren { (result) in
+            print("Ran fetchChildren")
+            if let children = try? result.get() {
+                print(children, "HERE, child.")
+                DispatchQueue.main.async {
+                    self.nc.children = children
+                    self.tableView.reloadData()
                 }
             }
         }
+        
+//        //token
+//        let accessToken: String? = KeychainWrapper.standard.string(forKey: "accessToken")
+//
+//        if accessToken == nil {
+//            //this means we have not signed in otherwise we would have our token
+//            print("AccessToken nil.")
+//        } else {
+//            print("AccessToken not nil. ")
+//            nc.fetchChildren { (result) in
+//                print("Ran fetchChildren")
+//                if let children = try? result.get() {
+//                    DispatchQueue.main.async {
+//                        self.nc.children = children
+//                        self.tableView.reloadData()
+//                    }
+//                }
+//            }
+//        }
     }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -48,7 +62,7 @@ class ChildrenTableViewController: UITableViewController {
         if segue.identifier == "AddChild Segue" {
             guard let destinationVc = segue.destination as? AddChildViewController, let index = tableView.indexPathForSelectedRow else { return }
             let childToPass = nc.children[index.row]
-            AppPresets.childId = childToPass.parentId //FIX - switch to childId
+            AppPresets.childId = childToPass.id //FIX - switch to childId
             destinationVc.child = childToPass
             destinationVc.nc = nc
         }
