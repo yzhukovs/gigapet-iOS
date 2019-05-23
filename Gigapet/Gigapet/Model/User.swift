@@ -13,12 +13,3 @@ struct User: Codable {
     let password: String
     let email: String?
 }
-
-struct Kid: Codable {
-    let childName: String
-    
-    let username: String
-    let password: String
-    let childAge: Int
-    
-}

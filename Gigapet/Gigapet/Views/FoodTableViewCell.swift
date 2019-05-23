@@ -10,6 +10,9 @@ import UIKit
 
 class FoodTableViewCell: UITableViewCell {
 
+    @IBOutlet var foodNameLbl: UILabel!
+    @IBOutlet var calorieLbl: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

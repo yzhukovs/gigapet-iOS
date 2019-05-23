@@ -10,6 +10,8 @@ import UIKit
 
 class MainPageViewController: UIViewController {
 
+    let nc = NetworkController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,14 +19,16 @@ class MainPageViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "Add Food Segue" {
+            guard let destinationVC = segue.destination as? AddFoodViewController else { return }
+            destinationVC.nc = nc
+        }
+        if segue.identifier == "Add Child Segue" {
+            guard let destinationVC = segue.destination as? AddChildViewController else { return }
+            destinationVC.nc = nc
+        }
     }
-    */
 
 }
