@@ -73,5 +73,11 @@ class FoodTableViewController: UITableViewController {
 
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard editingStyle == .delete else {return}
+        
+        tableView.deleteRows(at: [indexPath], with: .fade)
+    }
 
 }
