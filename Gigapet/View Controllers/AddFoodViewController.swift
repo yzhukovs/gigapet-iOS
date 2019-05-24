@@ -71,7 +71,7 @@ class AddFoodViewController: UIViewController {
             displayMessage(userMessage: "You must go back to select a child before adding food items")
             return
         }
-        nc?.addFood(foodName: foodTextField.text!, foodType: categorySelected, calories: caloriesTextField.text!, date: "2019-05-25", childId: AppPresets.childId!, completion: { (error) in
+        nc?.addFood(foodName: foodTextField.text!, foodType: categorySelected, calories: caloriesTextField.text!, date: "2019-05-24", childId: String(AppPresets.childId!), completion: { (error) in
             if let error = error {
                 print(error)
                 return
