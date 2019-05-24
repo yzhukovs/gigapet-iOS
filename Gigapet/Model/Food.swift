@@ -13,8 +13,8 @@ struct Food: Codable {
     var foodType: Category
     var calories: String
     var date: String
-    var parentId: String
-    var childId: String
+    var parentId: Int
+    var childId: Int
 }
 
 enum Category: String, Codable {

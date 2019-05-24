@@ -40,7 +40,7 @@ class AddChildViewController: UIViewController {
             return
         }
         
-        nc?.addChild(name: childNameTextField.text!, calorieGoal: calorieGoalTextField.text!, completion: { (error) in
+        nc?.addChild(name: childNameTextField.text!, calorieGoal: Int(calorieGoalTextField.text!)!, completion: { (error) in
             if let error = error {
                 print(error)
                 return

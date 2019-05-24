@@ -9,6 +9,6 @@
 import Foundation
 
 struct AppPresets {
-    static var parentId: String?
-    static var childId: String?
+    static var parentId: Int?
+    static var childId: Int?
 }
