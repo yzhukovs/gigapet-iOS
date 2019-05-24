@@ -118,7 +118,7 @@ class NetworkController {
 
     func addFood(foodName: String, foodType: Category, calories: String, date: String, childId: String, completion: @escaping (Error?) -> Void){
         let userId: String = KeychainWrapper.standard.string(forKey: "userId")!
-
+        
         let newFood = Food(foodName: foodName, foodType: foodType, calories: calories, date: date, parentId: userId, childId: childId)
         
         //get the url
@@ -131,11 +131,6 @@ class NetworkController {
         //token
         let accessToken: String = KeychainWrapper.standard.string(forKey: "accessToken")!
         request.addValue("\(String(describing: accessToken))", forHTTPHeaderField: "Authorization")
-        
-        //unwarp the bearer because we need to add the value to the header
-//        guard let bearer = bearer else {
-//            completion(NSError())
-//            return }
         
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 //        request.addValue("Bearer \(bearer.token)", forHTTPHeaderField: "Authorization")
@@ -266,7 +261,6 @@ class NetworkController {
             let jd = JSONDecoder()
             jd.dateDecodingStrategy = .iso8601  //because our object has a property of type Date, we must decode/encode Date property by using this
             do {
-                print("In do block HERE", jd)
                 let foods = try jd.decode([Food].self, from: data)
                 print("do block", foods)
                 completion(.success(foods))

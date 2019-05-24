@@ -72,6 +72,7 @@ class AddFoodViewController: UIViewController {
             return
         }
         nc?.addFood(foodName: foodTextField.text!, foodType: categorySelected, calories: caloriesTextField.text!, date: "2019-05-24", childId: String(AppPresets.childId!), completion: { (error) in
+            print("HERE, added food")
             if let error = error {
                 print(error)
                 return
