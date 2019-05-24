@@ -1,0 +1,564 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F6C6682DA1DC311B14D3655 /* Pods_Gigapet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1228E25B748404596C062673 /* Pods_Gigapet.framework */; };
+		FA07B85F2295BC1C004D6B6E /* AddFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07B85E2295BC1C004D6B6E /* AddFoodViewController.swift */; };
+		FA07B8612295BD66004D6B6E /* AddChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07B8602295BD66004D6B6E /* AddChildViewController.swift */; };
+		FA07B8632295C300004D6B6E /* AppPresets.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07B8622295C300004D6B6E /* AppPresets.swift */; };
+		FA07B8652295DF7F004D6B6E /* Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07B8642295DF7F004D6B6E /* Child.swift */; };
+		FA07B8672295E32B004D6B6E /* ChildrenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07B8662295E32B004D6B6E /* ChildrenTableViewController.swift */; };
+		FA07B86B2295E4CA004D6B6E /* ChildTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07B86A2295E4CA004D6B6E /* ChildTableViewCell.swift */; };
+		FA3EF5C022932F7400168841 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EF5BF22932F7400168841 /* AppDelegate.swift */; };
+		FA3EF5C222932F7400168841 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EF5C122932F7400168841 /* ViewController.swift */; };
+		FA3EF5C522932F7400168841 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA3EF5C322932F7400168841 /* Main.storyboard */; };
+		FA3EF5C722932F7C00168841 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA3EF5C622932F7C00168841 /* Assets.xcassets */; };
+		FA3EF5CA22932F7C00168841 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA3EF5C822932F7C00168841 /* LaunchScreen.storyboard */; };
+		FA3EF5D6229333C300168841 /* FoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EF5D5229333C300168841 /* FoodTableViewController.swift */; };
+		FA3EF5D8229333DF00168841 /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EF5D7229333DF00168841 /* FoodDetailViewController.swift */; };
+		FA3EF5DA2293369F00168841 /* SpriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EF5D92293369F00168841 /* SpriteViewController.swift */; };
+		FA3EF5DD2293379100168841 /* SpriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EF5DC2293379100168841 /* SpriteView.swift */; };
+		FA3EF5DF2293388900168841 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EF5DE2293388900168841 /* Pet.swift */; };
+		FA3EF5E22293397600168841 /* SpirteExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EF5E12293397600168841 /* SpirteExtension.swift */; };
+		FA3EF5EA22935BA500168841 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EF5E922935BA500168841 /* Food.swift */; };
+		FA3EF5EC22935E0D00168841 /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EF5EB22935E0D00168841 /* FoodTableViewCell.swift */; };
+		FA3EF5EE2293604600168841 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EF5ED2293604600168841 /* SignupViewController.swift */; };
+		FA3EF5F02293616900168841 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EF5EF2293616900168841 /* LoginViewController.swift */; };
+		FAAEE0C02294A24F005D3763 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEE0BF2294A24F005D3763 /* User.swift */; };
+		FAAEE0C22294ABD6005D3763 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEE0C12294ABD6005D3763 /* MainPageViewController.swift */; };
+		FAAEE0C42294B3BC005D3763 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEE0C32294B3BC005D3763 /* NetworkController.swift */; };
+		FAAEE0C62294B5D4005D3763 /* Bearer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEE0C52294B5D4005D3763 /* Bearer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1228E25B748404596C062673 /* Pods_Gigapet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gigapet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32453DF3895B2935A376D979 /* Pods-Gigapet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gigapet.debug.xcconfig"; path = "Target Support Files/Pods-Gigapet/Pods-Gigapet.debug.xcconfig"; sourceTree = "<group>"; };
+		85AB6421557872D70E841816 /* Pods-Gigapet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gigapet.release.xcconfig"; path = "Target Support Files/Pods-Gigapet/Pods-Gigapet.release.xcconfig"; sourceTree = "<group>"; };
+		FA07B85E2295BC1C004D6B6E /* AddFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodViewController.swift; sourceTree = "<group>"; };
+		FA07B8602295BD66004D6B6E /* AddChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChildViewController.swift; sourceTree = "<group>"; };
+		FA07B8622295C300004D6B6E /* AppPresets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPresets.swift; sourceTree = "<group>"; };
+		FA07B8642295DF7F004D6B6E /* Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Child.swift; sourceTree = "<group>"; };
+		FA07B8662295E32B004D6B6E /* ChildrenTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildrenTableViewController.swift; sourceTree = "<group>"; };
+		FA07B86A2295E4CA004D6B6E /* ChildTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildTableViewCell.swift; sourceTree = "<group>"; };
+		FA3EF5BC22932F7400168841 /* Gigapet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gigapet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA3EF5BF22932F7400168841 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA3EF5C122932F7400168841 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FA3EF5C422932F7400168841 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FA3EF5C622932F7C00168841 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA3EF5C922932F7C00168841 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FA3EF5CB22932F7C00168841 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA3EF5D5229333C300168841 /* FoodTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewController.swift; sourceTree = "<group>"; };
+		FA3EF5D7229333DF00168841 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
+		FA3EF5D92293369F00168841 /* SpriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteViewController.swift; sourceTree = "<group>"; };
+		FA3EF5DC2293379100168841 /* SpriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteView.swift; sourceTree = "<group>"; };
+		FA3EF5DE2293388900168841 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
+		FA3EF5E12293397600168841 /* SpirteExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpirteExtension.swift; sourceTree = "<group>"; };
+		FA3EF5E922935BA500168841 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		FA3EF5EB22935E0D00168841 /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
+		FA3EF5ED2293604600168841 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		FA3EF5EF2293616900168841 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FAAEE0BF2294A24F005D3763 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FAAEE0C12294ABD6005D3763 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
+		FAAEE0C32294B3BC005D3763 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		FAAEE0C52294B5D4005D3763 /* Bearer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bearer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA3EF5B922932F7400168841 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F6C6682DA1DC311B14D3655 /* Pods_Gigapet.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0696A9DD57918BFE07E009D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1228E25B748404596C062673 /* Pods_Gigapet.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E2216E4FACE1E9B2DAB086B4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				32453DF3895B2935A376D979 /* Pods-Gigapet.debug.xcconfig */,
+				85AB6421557872D70E841816 /* Pods-Gigapet.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FA07B8682295E42B004D6B6E /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				FA3EF5ED2293604600168841 /* SignupViewController.swift */,
+				FA3EF5EF2293616900168841 /* LoginViewController.swift */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		FA07B8692295E42F004D6B6E /* Table Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA3EF5D5229333C300168841 /* FoodTableViewController.swift */,
+				FA07B8662295E32B004D6B6E /* ChildrenTableViewController.swift */,
+			);
+			path = "Table Views";
+			sourceTree = "<group>";
+		};
+		FA3EF5B322932F7400168841 = {
+			isa = PBXGroup;
+			children = (
+				FA3EF5BE22932F7400168841 /* Gigapet */,
+				FA3EF5BD22932F7400168841 /* Products */,
+				E2216E4FACE1E9B2DAB086B4 /* Pods */,
+				0696A9DD57918BFE07E009D7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FA3EF5BD22932F7400168841 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA3EF5BC22932F7400168841 /* Gigapet.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA3EF5BE22932F7400168841 /* Gigapet */ = {
+			isa = PBXGroup;
+			children = (
+				FA3EF5D4229330C100168841 /* Storyboards */,
+				FA3EF5D12293309E00168841 /* Model */,
+				FA3EF5D2229330A900168841 /* Model Controller */,
+				FA3EF5DB2293377F00168841 /* Views */,
+				FA3EF5D3229330B100168841 /* View Controllers */,
+				FA3EF5E02293396A00168841 /* Resources */,
+				FA3EF5C622932F7C00168841 /* Assets.xcassets */,
+				FA3EF5CB22932F7C00168841 /* Info.plist */,
+			);
+			path = Gigapet;
+			sourceTree = "<group>";
+		};
+		FA3EF5D12293309E00168841 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA3EF5DE2293388900168841 /* Pet.swift */,
+				FA3EF5E922935BA500168841 /* Food.swift */,
+				FAAEE0BF2294A24F005D3763 /* User.swift */,
+				FAAEE0C52294B5D4005D3763 /* Bearer.swift */,
+				FA07B8642295DF7F004D6B6E /* Child.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA3EF5D2229330A900168841 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FAAEE0C32294B3BC005D3763 /* NetworkController.swift */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		FA3EF5D3229330B100168841 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA07B8692295E42F004D6B6E /* Table Views */,
+				FA07B8682295E42B004D6B6E /* Signup */,
+				FA3EF5C122932F7400168841 /* ViewController.swift */,
+				FA3EF5D7229333DF00168841 /* FoodDetailViewController.swift */,
+				FA3EF5D92293369F00168841 /* SpriteViewController.swift */,
+				FAAEE0C12294ABD6005D3763 /* MainPageViewController.swift */,
+				FA07B85E2295BC1C004D6B6E /* AddFoodViewController.swift */,
+				FA07B8602295BD66004D6B6E /* AddChildViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FA3EF5D4229330C100168841 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FA3EF5C322932F7400168841 /* Main.storyboard */,
+				FA3EF5C822932F7C00168841 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FA3EF5DB2293377F00168841 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA3EF5DC2293379100168841 /* SpriteView.swift */,
+				FA3EF5EB22935E0D00168841 /* FoodTableViewCell.swift */,
+				FA07B86A2295E4CA004D6B6E /* ChildTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA3EF5E02293396A00168841 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FA3EF5BF22932F7400168841 /* AppDelegate.swift */,
+				FA3EF5E12293397600168841 /* SpirteExtension.swift */,
+				FA07B8622295C300004D6B6E /* AppPresets.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA3EF5BB22932F7400168841 /* Gigapet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA3EF5CE22932F7C00168841 /* Build configuration list for PBXNativeTarget "Gigapet" */;
+			buildPhases = (
+				D21E61163003E264187EAAE0 /* [CP] Check Pods Manifest.lock */,
+				FA3EF5B822932F7400168841 /* Sources */,
+				FA3EF5B922932F7400168841 /* Frameworks */,
+				FA3EF5BA22932F7400168841 /* Resources */,
+				8ABAAF1BA6CAF2C0576C65AC /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Gigapet;
+			productName = Gigapet;
+			productReference = FA3EF5BC22932F7400168841 /* Gigapet.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA3EF5B422932F7400168841 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Alex;
+				TargetAttributes = {
+					FA3EF5BB22932F7400168841 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = FA3EF5B722932F7400168841 /* Build configuration list for PBXProject "Gigapet" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA3EF5B322932F7400168841;
+			productRefGroup = FA3EF5BD22932F7400168841 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA3EF5BB22932F7400168841 /* Gigapet */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA3EF5BA22932F7400168841 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA3EF5CA22932F7C00168841 /* LaunchScreen.storyboard in Resources */,
+				FA3EF5C722932F7C00168841 /* Assets.xcassets in Resources */,
+				FA3EF5C522932F7400168841 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8ABAAF1BA6CAF2C0576C65AC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gigapet/Pods-Gigapet-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyCrypto/SwiftyCrypto.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJWT/SwiftyJWT.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyCrypto.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJWT.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gigapet/Pods-Gigapet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D21E61163003E264187EAAE0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gigapet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA3EF5B822932F7400168841 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAAEE0C02294A24F005D3763 /* User.swift in Sources */,
+				FA07B8612295BD66004D6B6E /* AddChildViewController.swift in Sources */,
+				FA3EF5F02293616900168841 /* LoginViewController.swift in Sources */,
+				FA3EF5DF2293388900168841 /* Pet.swift in Sources */,
+				FA07B86B2295E4CA004D6B6E /* ChildTableViewCell.swift in Sources */,
+				FA3EF5C222932F7400168841 /* ViewController.swift in Sources */,
+				FA3EF5EE2293604600168841 /* SignupViewController.swift in Sources */,
+				FA07B8632295C300004D6B6E /* AppPresets.swift in Sources */,
+				FAAEE0C42294B3BC005D3763 /* NetworkController.swift in Sources */,
+				FA3EF5D6229333C300168841 /* FoodTableViewController.swift in Sources */,
+				FA3EF5DA2293369F00168841 /* SpriteViewController.swift in Sources */,
+				FAAEE0C62294B5D4005D3763 /* Bearer.swift in Sources */,
+				FA3EF5E22293397600168841 /* SpirteExtension.swift in Sources */,
+				FAAEE0C22294ABD6005D3763 /* MainPageViewController.swift in Sources */,
+				FA3EF5C022932F7400168841 /* AppDelegate.swift in Sources */,
+				FA3EF5EA22935BA500168841 /* Food.swift in Sources */,
+				FA3EF5EC22935E0D00168841 /* FoodTableViewCell.swift in Sources */,
+				FA07B8672295E32B004D6B6E /* ChildrenTableViewController.swift in Sources */,
+				FA07B85F2295BC1C004D6B6E /* AddFoodViewController.swift in Sources */,
+				FA3EF5D8229333DF00168841 /* FoodDetailViewController.swift in Sources */,
+				FA07B8652295DF7F004D6B6E /* Child.swift in Sources */,
+				FA3EF5DD2293379100168841 /* SpriteView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FA3EF5C322932F7400168841 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA3EF5C422932F7400168841 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FA3EF5C822932F7C00168841 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA3EF5C922932F7C00168841 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA3EF5CC22932F7C00168841 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA3EF5CD22932F7C00168841 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA3EF5CF22932F7C00168841 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32453DF3895B2935A376D979 /* Pods-Gigapet.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HQP2ZWNS2F;
+				INFOPLIST_FILE = Gigapet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.weekend.Gigapet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA3EF5D022932F7C00168841 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85AB6421557872D70E841816 /* Pods-Gigapet.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HQP2ZWNS2F;
+				INFOPLIST_FILE = Gigapet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.weekend.Gigapet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA3EF5B722932F7400168841 /* Build configuration list for PBXProject "Gigapet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA3EF5CC22932F7C00168841 /* Debug */,
+				FA3EF5CD22932F7C00168841 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA3EF5CE22932F7C00168841 /* Build configuration list for PBXNativeTarget "Gigapet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA3EF5CF22932F7C00168841 /* Debug */,
+				FA3EF5D022932F7C00168841 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA3EF5B422932F7400168841 /* Project object */;
+}
