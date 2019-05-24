@@ -171,7 +171,7 @@ class NetworkController {
         let userId: String = KeychainWrapper.standard.string(forKey: "userId")!
 
         let newChild = Child(id: Int(userId)!, name: name, calorieGoal: calorieGoal)
-        
+        print("HERE AddChild: ", newChild)
         //get the url
         let url = baseURL.appendingPathComponent("app/addchild")
         

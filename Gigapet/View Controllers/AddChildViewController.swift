@@ -12,7 +12,7 @@ class AddChildViewController: UIViewController {
 
     // MARK: - Constants
     
-    var nc: NetworkController?{
+    var nc: NetworkController? {
         didSet{
             print("NC passed.")
         }
@@ -32,6 +32,7 @@ class AddChildViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func saveChildBtnPressed(_ sender: UIBarButtonItem) {
+        print("Clicked save child.")
         // Validate required fields are not empty
         if (childNameTextField.text?.isEmpty)! ||
             (calorieGoalTextField.text?.isEmpty)! {

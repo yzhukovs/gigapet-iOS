@@ -17,6 +17,7 @@ class ChildrenTableViewController: UITableViewController {
             tableView.reloadData()
         }
     }
+    var indexSelected: IndexPath?
     
     // MARK: - VC Lifecycle
     override func viewDidLoad() {
@@ -25,6 +26,7 @@ class ChildrenTableViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         print("view did appear ran")
+        tableView.reloadData()
         nc.fetchChildren { (result) in
             print("Ran fetchChildren")
             if let children = try? result.get() {
@@ -57,15 +59,18 @@ class ChildrenTableViewController: UITableViewController {
     }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "AddChild Segue" {
-            guard let destinationVc = segue.destination as? AddChildViewController, let index = tableView.indexPathForSelectedRow else { return }
-            let childToPass = nc.children[index.row]
-            AppPresets.childId = childToPass.id
-            print("HERE Segue:", AppPresets.childId, childToPass.id)
-            destinationVc.child = childToPass
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) { //tableView.indexPathForSelectedRow
+        if segue.identifier == "AddChildSegue" {
+            print(tableView.indexPathForSelectedRow, indexSelected, "HERE")
+            guard let destinationVc = segue.destination as? AddChildViewController else {
+                return }
+//            let childToPass = nc.children[index.row]
+//            AppPresets.childId = childToPass.id
+//            print("HERE Segue:", AppPresets.childId, childToPass.id)
+//            destinationVc.child = childToPass
             destinationVc.nc = nc
         }
+        
     }
     
     // MARK: - Table view data source
@@ -90,6 +95,7 @@ class ChildrenTableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         AppPresets.childId = nc.children[indexPath.row].id
-        print("DidSelectRow", AppPresets.childId)
+        indexSelected = indexPath
+        print("DidSelectRow", AppPresets.childId, indexSelected, tableView.indexPathForSelectedRow)
     }
 }

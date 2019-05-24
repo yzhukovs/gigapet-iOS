@@ -702,14 +702,14 @@
                     <navigationItem key="navigationItem" title="Children" id="lyE-3n-GVF">
                         <barButtonItem key="rightBarButtonItem" title="Add Child" id="aKx-0Y-gTd">
                             <connections>
-                                <segue destination="Egr-YA-62J" kind="show" identifier="AddChild Segue" id="iuk-nf-50F"/>
+                                <segue destination="Egr-YA-62J" kind="show" identifier="AddChildSegue" id="iuk-nf-50F"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cKo-0g-Z5b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3054" y="879"/>
+            <point key="canvasLocation" x="3054" y="820"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dUW-xU-fmG">
