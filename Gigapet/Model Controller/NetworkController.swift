@@ -119,7 +119,7 @@ class NetworkController {
     func addFood(foodName: String, foodType: Category, calories: String, date: String, childId: String, completion: @escaping (Error?) -> Void){
         let userId: String = KeychainWrapper.standard.string(forKey: "userId")!
         
-        let newFood = Food(foodName: foodName, foodType: foodType, calories: calories, date: date, parentId: userId, childId: childId)
+        let newFood = Food(foodName: foodName, foodType: foodType, calories: calories, date: date, parentId: userId, childId: Int(childId)!)
         
         //get the url
         let url = baseURL.appendingPathComponent("app/addfood")
@@ -179,11 +179,6 @@ class NetworkController {
         var request = URLRequest(url: url)
         request.httpMethod = HTTPMethod.post.rawValue
         
-        //unwarp the bearer because we need to add the value to the header
-//        guard let bearer = bearer else {
-//            completion(NSError())
-//            return }
-        
         //token
         let accessToken: String = KeychainWrapper.standard.string(forKey: "accessToken")!
         request.addValue("\(String(describing: accessToken))", forHTTPHeaderField: "Authorization")
@@ -222,11 +217,11 @@ class NetworkController {
             }.resume()
     }
 
-    func fetchFoods(completion: @escaping (Result<[Food], NetworkError>) -> Void){
+    func fetchFoods(childId: Int, completion: @escaping (Result<[Food], NetworkError>) -> Void){
         let userId: String = KeychainWrapper.standard.string(forKey: "userId")!
 
         // get foods for this child
-        let url = baseURL.appendingPathComponent("app/getfood/\(userId)")
+        let url = baseURL.appendingPathComponent("app/getfood/\(childId)")
         
         //set up the request
         var request = URLRequest(url: url)
@@ -319,5 +314,4 @@ class NetworkController {
             }
             }.resume()
     }
-    
 }

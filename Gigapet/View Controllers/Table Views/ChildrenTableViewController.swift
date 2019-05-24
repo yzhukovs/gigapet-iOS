@@ -88,4 +88,8 @@ class ChildrenTableViewController: UITableViewController {
         
         return cell
     }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        AppPresets.childId = nc.children[indexPath.row].id
+        print("DidSelectRow", AppPresets.childId)
+    }
 }

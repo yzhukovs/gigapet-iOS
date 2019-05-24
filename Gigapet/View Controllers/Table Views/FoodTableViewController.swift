@@ -26,17 +26,22 @@ class FoodTableViewController: UITableViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("view did appear ran")
+        print("view did appear ran in Food Table View.")
 
-        nc.fetchFoods { (result) in
-            if let foods = try? result.get() {
-                print("Foods HERE:", foods)
-                DispatchQueue.main.async {
-                    self.nc.foods = foods
-                    self.tableView.reloadData()
+        if let childId = AppPresets.childId {
+            print("HERE", childId)
+            nc.fetchFoods(childId: childId) { (result) in
+                print("Inside fetch foods", childId, result)
+                if let foods = try? result.get() {
+                    print("Foods HERE:", foods)
+                    DispatchQueue.main.async {
+                        self.nc.foods = foods
+                        self.tableView.reloadData()
+                    }
+                } else {
+                    self.displayMessage(userMessage: "Please select your child from the child view first.")
                 }
-            }
-        }
+        }}
         
         
 //        //token
@@ -93,4 +98,19 @@ class FoodTableViewController: UITableViewController {
         tableView.deleteRows(at: [indexPath], with: .fade)
     }
 
+    func displayMessage(userMessage:String) -> Void {
+        DispatchQueue.main.async {
+            let alertController = UIAlertController(title: "Alert", message: userMessage, preferredStyle: .alert)
+            let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction!) in
+                // Code in this block will trigger when OK button tapped.
+                print("Ok button tapped")
+                DispatchQueue.main.async {
+                    self.dismiss(animated: true, completion: nil)
+                }
+            }
+            alertController.addAction(OKAction)
+            self.present(alertController, animated: true, completion:nil)
+        }
+    }
+    
 }
