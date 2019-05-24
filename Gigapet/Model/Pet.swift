@@ -13,6 +13,6 @@ class Pet {
     private init() {}
     
     //Roll & Zoom when pet is healthy
-    var shouldRoll = false
+    var shouldRoll = true
     var shouldZoom = false
 }

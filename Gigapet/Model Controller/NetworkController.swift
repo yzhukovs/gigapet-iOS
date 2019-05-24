@@ -187,12 +187,19 @@ class NetworkController {
 //        request.addValue("Bearer \(bearer.token)", forHTTPHeaderField: "Authorization")
         print("Token: \(accessToken)")
         
+//        var someData = String(data: data, encoding: String.Encoding.utf8)
+//        print("Data here", someData)
+        
         //we are posting so we need to encode the httpbody
         let encoder = JSONEncoder()
         encoder.dateEncodingStrategy = .iso8601
+        
         do {
-            let jsondata = try encoder.encode(newChild)
-            request.httpBody =  jsondata
+//            let jsondata = try encoder.encode(newChild)
+//            print("HERE, JSON data: ", jsondata)
+//            request.httpBody =  jsondata
+            request.httpBody =  try encoder.encode(newChild)
+
         } catch  {
             print("Error adding food: \(error.localizedDescription)")
             completion(error)

@@ -82,6 +82,7 @@ class ChildrenTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        print(nc.children, "Children Count in table view.")
         return nc.children.count
     }
     
