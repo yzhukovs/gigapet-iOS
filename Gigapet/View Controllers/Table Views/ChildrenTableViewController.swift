@@ -1,8 +1,8 @@
 //
-//  NetworkController.swift
+//  ChildrenTableViewController.swift
 //  Gigapet
 //
-//  Created by Alex on 5/21/19.
+//  Created by Alex on 5/22/19.
 //  Copyright © 2019 Alex. All rights reserved.
 //
 import UIKit
@@ -36,24 +36,24 @@ class ChildrenTableViewController: UITableViewController {
             }
         }
         
-        //        //token
-        //        let accessToken: String? = KeychainWrapper.standard.string(forKey: "accessToken")
-        //
-        //        if accessToken == nil {
-        //            //this means we have not signed in otherwise we would have our token
-        //            print("AccessToken nil.")
-        //        } else {
-        //            print("AccessToken not nil. ")
-        //            nc.fetchChildren { (result) in
-        //                print("Ran fetchChildren")
-        //                if let children = try? result.get() {
-        //                    DispatchQueue.main.async {
-        //                        self.nc.children = children
-        //                        self.tableView.reloadData()
-        //                    }
-        //                }
-        //            }
-        //        }
+//        //token
+//        let accessToken: String? = KeychainWrapper.standard.string(forKey: "accessToken")
+//
+//        if accessToken == nil {
+//            //this means we have not signed in otherwise we would have our token
+//            print("AccessToken nil.")
+//        } else {
+//            print("AccessToken not nil. ")
+//            nc.fetchChildren { (result) in
+//                print("Ran fetchChildren")
+//                if let children = try? result.get() {
+//                    DispatchQueue.main.async {
+//                        self.nc.children = children
+//                        self.tableView.reloadData()
+//                    }
+//                }
+//            }
+//        }
     }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
