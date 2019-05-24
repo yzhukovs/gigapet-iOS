@@ -117,9 +117,9 @@ class NetworkController {
     }
 
     func addFood(foodName: String, foodType: Category, calories: String, date: String, childId: String, completion: @escaping (Error?) -> Void){
-        let userId: String? = KeychainWrapper.standard.string(forKey: "userId")
+        let userId: String = KeychainWrapper.standard.string(forKey: "userId")!
 
-        let newFood = Food(foodName: foodName, foodType: foodType, calories: calories, date: date, parentId: userId!, childId: childId)
+        let newFood = Food(foodName: foodName, foodType: foodType, calories: calories, date: date, parentId: userId, childId: childId)
         
         //get the url
         let url = baseURL.appendingPathComponent("app/addfood")
@@ -173,9 +173,9 @@ class NetworkController {
 
     
     func addChild(name: String, calorieGoal: String, completion: @escaping (Error?) -> Void){
-        let userId: String? = KeychainWrapper.standard.string(forKey: "userId")
+        let userId: String = KeychainWrapper.standard.string(forKey: "userId")!
 
-        let newChild = Child(id: userId!, name: name, calorieGoal: calorieGoal)
+        let newChild = Child(id: userId, name: name, calorieGoal: calorieGoal)
         
         //get the url
         let url = baseURL.appendingPathComponent("app/addchild")
@@ -266,6 +266,7 @@ class NetworkController {
             let jd = JSONDecoder()
             jd.dateDecodingStrategy = .iso8601  //because our object has a property of type Date, we must decode/encode Date property by using this
             do {
+                print("In do block HERE", jd)
                 let foods = try jd.decode([Food].self, from: data)
                 print("do block", foods)
                 completion(.success(foods))
@@ -277,11 +278,11 @@ class NetworkController {
             }.resume()
     }
     
-    func fetchChildren(completion: @escaping (Result<[Child], NetworkError>) -> Void){
-        let userId: String? = KeychainWrapper.standard.string(forKey: "userId")
+    func fetchChildren(completion: @escaping (Result<Child, NetworkError>) -> Void){
+        let userId: String = KeychainWrapper.standard.string(forKey: "userId")!
         // get list of children
         let url = baseURL.appendingPathComponent("app/childname/\(userId)")
-        
+        print("UserId here:", userId)
         //set up the request
         var request = URLRequest(url: url)
         request.httpMethod = HTTPMethod.get.rawValue
@@ -310,11 +311,12 @@ class NetworkController {
                 completion(.failure(.badData))
                 return
             }
-            
+            var someData = String(data: data, encoding: String.Encoding.utf8)
+            print("Data here", someData)
             let jd = JSONDecoder()
             jd.dateDecodingStrategy = .iso8601  //because our object has a property of type Date, we must decode/encode Date property by using this
             do {
-                let child = try jd.decode([Child].self, from: data)
+                let child = try jd.decode(Child.self, from: data)
                 completion(.success(child))
             } catch {
                 print("Error decoding: \(error.localizedDescription)")

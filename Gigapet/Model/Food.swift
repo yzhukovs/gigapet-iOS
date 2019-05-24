@@ -15,7 +15,6 @@ struct Food: Codable {
     var date: String
     var parentId: String
     var childId: String
-
 }
 
 enum Category: String, Codable {
