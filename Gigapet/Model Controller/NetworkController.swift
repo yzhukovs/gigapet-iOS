@@ -119,7 +119,7 @@ class NetworkController {
     func addFood(foodName: String, foodType: Category, calories: String, date: String, childId: String, completion: @escaping (Error?) -> Void){
         let userId: String = KeychainWrapper.standard.string(forKey: "userId")!
         
-        let newFood = Food(foodName: foodName, foodType: foodType, calories: calories, date: date, parentId: userId, childId: Int(childId)!)
+        let newFood = Food(foodName: foodName, foodType: foodType, calories: calories, date: date, parentId: userId, id: Int(childId)!, mealTime: "lunch")
         
         //get the url
         let url = baseURL.appendingPathComponent("app/addfood")

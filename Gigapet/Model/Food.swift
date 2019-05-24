@@ -11,10 +11,11 @@ import Foundation
 struct Food: Codable {
     var foodName: String
     var foodType: Category
-    var calories: String
+    var calories: String?
     var date: String
-    var parentId: String
-    var childId: Int
+    var parentId: String?
+    var id: Int
+    var mealTime: String?
 }
 
 enum Category: String, Codable {

@@ -517,21 +517,25 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="86.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Food: Carrots" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWe-23-dfq">
-                                            <rect key="frame" x="20" y="27" width="146" height="32"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food: Carrots" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWe-23-dfq">
+                                            <rect key="frame" x="20" y="33" width="104.5" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1200" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWQ-kT-hk2">
-                                            <rect key="frame" x="234" y="27" width="160" height="32"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1200" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWQ-kT-hk2">
+                                            <rect key="frame" x="320" y="33" width="74" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="LWe-23-dfq" firstAttribute="leading" secondItem="vTf-7Q-RIL" secondAttribute="leadingMargin" id="ZAh-g5-f7B"/>
+                                        <constraint firstItem="dWQ-kT-hk2" firstAttribute="trailing" secondItem="vTf-7Q-RIL" secondAttribute="trailingMargin" id="dXI-oj-2lY"/>
+                                        <constraint firstItem="dWQ-kT-hk2" firstAttribute="centerY" secondItem="vTf-7Q-RIL" secondAttribute="centerY" id="qlT-fT-nNU"/>
+                                        <constraint firstItem="LWe-23-dfq" firstAttribute="centerY" secondItem="vTf-7Q-RIL" secondAttribute="centerY" id="zPS-zP-QCc"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="calorieLbl" destination="dWQ-kT-hk2" id="pFX-WS-zbI"/>
